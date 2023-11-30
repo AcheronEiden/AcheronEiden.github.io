@@ -1,52 +1,44 @@
-/*-----------------------------------------------------------------------------------------------*/
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
-/* About Me positioning */
 .one{
     grid-column: 1;
     grid-row: 1;
     padding: 20px;
     border: 1px solid #ccc;
 }
-/* Education positioning */
 .two{
     grid-column: 2;
     grid-row: 1;
     padding: 20px;
     border: 1px solid #ccc;
 }
-/* Profeciency/Skills positioning */
 .three{
     grid-column: 1;
     grid-row: 2;
     padding: 20px;
     border: 1px solid #ccc;
 }
-/* Relevant Experience positioning */
 .four{
     grid-column: 2;
     grid-row: 2;
     padding: 20px;
     border: 1px solid #ccc;
 }
-/* Contact positioning */
 .five{
     grid-column: 1;
     grid-row: 3;
     padding: 20px;
     border: 1px solid #ccc;
 }
-/* Hobbies & References positioning */
 .six{
     grid-column: 2;
     grid-row: 3;
     padding: 20px;
     border: 1px solid #ccc;
 }
-/*-----------------------------------------------------------------------------------------------*/
 #font{
     font-family: sans-serif, serif, monospace;
 }
@@ -76,13 +68,8 @@ h3, #first_paragraph{
 a{
     font-style: italic;
 }
-/*-----------------------------------------------------------------------------------------------*/
-/* Ribbon of the homepge*/
 .ribbon {
-/* Make each word evenly spaced horizontally */
     text-align: justify;
-/* Make the ribbon span the entire width of the page */
     width: 100%;
-/* Space between each word */
     word-spacing: 1em;
 }

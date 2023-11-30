@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="en"> <!-- en = English, used the ISO 639-1 standard for language codes-->
+<html lang="en"> 
     <head>
-        <!-- Specifies the character encoding for the HTML document -->
-        <meta charset="UTF-8"> <!-- UTF-8 is recommended-->
-        <!-- Ensures that the page is displayed correctly on mobile (different) devices -->
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Specifies the author of the page -->
         <meta name="author" content="Alhassan Jawad">
-        <!-- Specifies the description of the page -->
         <meta name="description" content="Alhassan Jawad's CV">
-        <!-- Specifies the keywords for search engines -->
         <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawad's CV,
         Electrical Engineering, Embedded Systems, Robotics, Programming, Uppsala University,
         Master's Student, GitHub, LinkedIn, Programming Languages, Signal Processing,
@@ -18,21 +13,17 @@
         Electrical Engineer, Embedded System, Robot, Programmer, Uppsala Uni,
         Master's Degree, Master's Program, GitHub Profile, LinkedIn Profile,
         Programming Language, Signal Process, Automatic Control, Artificial Intelligence,
-        ML, Machine Learn">    
-        <!-- Refreses the page every 30 seconds -->
+        ML, Machine Learn">
         <meta http-equiv="refresh" content="30">
         
-        <!-- Title -->
         <title>Teacher Assistant at Uppsala University</title>
         <script>
             function showPeriod(category) {
                 const allPeriods = document.getElementsByClassName('time');
-
                 for (let i = 0; i < allPeriods.length; i++) {
                     allPeriods[i].style.color = 'black'; // reset the color of all courses
                 }
                 const selectedPeriods = document.getElementsByClassName(category);
-
                 for (let i = 0; i < selectedPeriods.length; i++) {
                     selectedPeriods[i].style.color = 'red'; // set the color of the selected courses
                 }
@@ -62,7 +53,6 @@
         <small onclick="showPeriod('12HT23')">Autumn of 2023</small> | 
         <small onclick="showPeriod('34VT24')">Spring of 2024(INSHALLAH)</small>
         <ul>
-            <!--Period 1-2 of HT23-->
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TD722"><i class="time 12HT23">Programming Technique II 5Hp</i></a> [2023/08/29 - 2023/10/23] [60hr in total]
             </li>
@@ -70,7 +60,6 @@
                 <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TD433"><i class="time 12HT23">Programming Technique I 5Hp</i></a> [2023/11/2 - 2023/12/21] [60hr in total]
             </li>
             <br>
-            <!--Period 3 of VT24-->
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TD433"><i class="time 34VT24">Programming Technique I 5Hp</i></a> [] [120hr in total]
             </li>
@@ -80,7 +69,6 @@
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TD342"><i class="time 34VT24">Introduction to Scientific Computing</i></a> [] [120hr in total]
             </li>
-            <!--Period 4 of VT24-->
             <br>
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TD433"><i class="time 34VT24">Programming Technique I 5Hp</i></a> [] [120hr in total]

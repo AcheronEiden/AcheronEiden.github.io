@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="sv"> <!-- sv = Swedish, used the ISO 639-1 standard for language codes-->
+    <head>
+        <!-- Specifies the character encoding for the HTML document -->
+        <meta charset="UTF-8"> <!-- UTF-8 is recommended-->
+        <!-- Ensures that the page is displayed correctly on mobile (different) devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Specifies the author of the page -->
+        <meta name="author" content="Alhassan Jawad">
+        <!-- Specifies the description of the page -->
+        <meta name="description" content="Alhassan Jawad's CV">
+        <!-- Specifies the keywords for search engines -->
+        <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawads CV,
+        Elektroteknik, Inbyggda System, Robotik, Programmering, Uppsala Universitet,
+        Masterstudent, GitHub, LinkedIn, Programmeringsspråk, Signalbehandling,
+        Automation, Reglerteknik, AI, Maskininlärning, MatLab, MATLAB, matlab,
+        Elektroingenjör, Inbyggt System, Robot, Programmerare, Uppsala Uni,
+        Masterexamen, Masterprogram, GitHub-profil, LinkedIn-profil,
+        Programmeringsspråk, Signalbehandling, Automatisk Kontroll, Artificiell Intelligens,
+        ML, Maskininlärning">  
+        <!-- Refreshes the page every 30 seconds -->
+        <meta http-equiv="refresh" content="30">
+        
+        <!-- Title -->
+        <title>Lärarassistent vid Uppsala Universitet</title>
+        <script>
+            function showPeriod(category) {
+                const allPeriods = document.getElementsByClassName('time');
+
+                for (let i = 0; i < allPeriods.length; i++) {
+                    allPeriods[i].style.color = 'black'; // reset the color of all courses
+                }
+                const selectedPeriods = document.getElementsByClassName(category);
+
+                for (let i = 0; i < selectedPeriods.length; i++) {
+                    selectedPeriods[i].style.color = 'red'; // set the color of the selected courses
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Arbetsgivare: Uppsala Universitet</h2>
+        <img src="UppsalaUniversity.png" alt="UppsalaUniversitet" style="width: 60vw; max-width: 200px;">
+        <h3>Beskrivning av jobbet:</h3>
+        <p>
+            Innan sommaren 2023 anmälde jag mig till kursen
+            <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD722"><i>Programmeringsteknik II 5Hp</i></a>
+            vid Uppsala Universitet. Kursen handlade om att lära sig teorikunskaper om programmering på djupet samtidigt som vi,
+            praktiskt tillämpade vad vi lärde oss via Python. Jag lyckades få det högsta betyget i kursen och läraren frågade mig
+            om jag ville vara lärarassistent för kursen som gavs hösten 2023. Efter att ha övervägt fördelar och nackdelar med jobbet
+            ansökte jag om tjänsten som lärarassistent.
+        </p>
+        <p>
+            Sedan dess och fram till nu har jag arbetat som lärarassistent för programmeringskurser. Kurserna ges både på kandidat- och masternivå.
+            Mitt jobb är att hjälpa studenterna med deras uppgifter och svara på alla frågor de har.
+            Jag hjälper också läraren med att rätta uppgifterna/examinationsmoment och ge feedback till studenterna.
+            Det har även varit tillfällen när jag har fått i uppdrag att betygsätta studenternas tentamen.
+        </p>
+        <h3>Kurser som jag har arbetat eller arbetar som lärarassistent för:</h3>
+        <small>Visa (klicka på den tidsperiod du vill se):</small>
+        <small onclick="showPeriod('12HT23')">Höst 2023</small> | 
+        <small onclick="showPeriod('34VT24')">Vår 2024 (INSHALLAH)</small>
+        <ul>
+            <!--Period 1-2 of HT23-->
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD722"><i class="time 12HT23">Programmeringsteknik II 5Hp</i></a> [2023/08/29 - 2023/10/23] [60 timmar totalt]
+            </li>
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD433"><i class="time 12HT23">Programmeringsteknik I 5Hp</i></a> [2023/11/2 - 2023/12/21] [60 timmar totalt]
+            </li>
+            <br>
+            <!--Period 3 of VT24-->
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD433"><i class="time 34VT24">Programmeringsteknik I 5Hp</i></a> [] [120 timmar totalt]
+            </li>
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD722"><i class="time 34VT24">Programmeringsteknik II 5Hp</i></a> [] [120 timmar totalt]
+            </li>
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD342"><i class="time 34VT24">Introduktion till Beräkningsvetenskap</i></a> [] [120 timmar totalt]
+            </li>
+            <!--Period 4 of VT24-->
+            <br>
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD433"><i class="time 34VT24">Programmeringsteknik I 5Hp</i></a> [] [120 timmar totalt]
+            </li>
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD722"><i class="time 34VT24">Programmeringsteknik II 5Hp</i></a> [] [120 timmar totalt]
+            </li>
+            <li>
+                <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD342"><i class="time 34VT24">Introduktion till Beräkningsvetenskap</i></a> [] [120 timmar totalt]
+            </li>
+        </ul>
+    </body>
+</html>

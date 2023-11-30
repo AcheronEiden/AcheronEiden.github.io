@@ -2,7 +2,7 @@
 
 <html lang="en"> 
     <head>
-        <meta charset="UTF-8"> 
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Alhassan Jawad">
         <meta name="description" content="Alhassan Jawad's CV">
@@ -15,31 +15,40 @@
         Programming Language, Signal Process, Automatic Control, Artificial Intelligence,
         ML, Machine Learn">    
         <meta http-equiv="refresh" content="30">
-
         <title>Programming Software & Languages</title>
         <script>
             function showLanguages(category) {
                 const allLanguages = document.getElementsByClassName('language');
+
                 for (let i = 0; i < allLanguages.length; i++) {
-                    allLanguages[i].style.color = 'black'; // reset the color of all languages
+                    allLanguages[i].style.color = 'black';
                 }
                 const selectedLanguages = document.getElementsByClassName(category);
+
                 for (let i = 0; i < selectedLanguages.length; i++) {
-                    selectedLanguages[i].style.color = 'red'; // set the color of the selected languages
+                    selectedLanguages[i].style.color = 'red';
                 }
             }
         </script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h3>Programming languages I have experience with:</h3>
-        <hr> 
-        Show (click on the type of languages you wish to view): <br>
+        <div class="ribbon">
+            <h3>
+                <a target="_self" title="Homepage" href="../../index.html">Home</a>
+                <a target="_blank" title="Publications" href="../../Publications/Publications.html">Publications</a>
+                <a target="_blank" title="CV" href="../CV_main.html">CV</a>
+            </h3>
+        </div>
+        <hr>
+        <h3>Programming languages I have experience with <small>(click on the type of languages you wish to view):</small></h3>
         <li>
             <b onclick="showLanguages('frontend')">Frontend programming languages</b> <br>
         </li>
         <li>
             <b onclick="showLanguages('backend')">Backend programming languages</b>
         </li>
+        <hr> 
         <center>
             <h4>Objectoriented programming languages:</h4>
         </center>
@@ -52,7 +61,7 @@
             <br><br>
             <b class="language backend">C++</b> - The second programming language I learned. I have been programming in C++ for about 2 years now. I learned
             the language mainly for a course I took called <br>
-            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TE723">"Microcontroller Programming"</a>.
+            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TE723">Microcontroller Programming</a>.
             The course was about programming microcontrollers in C++ and I learned the basics of the language there.
             Afterwards I also used C++ in addition to Arduino IDE to program an external screen together with some LEDs to show different
             animations. The code for that project is also available on my GitHub page and is stored at a
@@ -68,7 +77,7 @@
         </center>
         <p>
             <b class="language backend">C</b> - Learned the basics about this language together with C++ for the course
-            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TE723">"Microcontroller Programming"</a>.
+            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1TE723">Microcontroller Programming</a>.
             <br><br>
             <b class="language backend">Assembly (MIPS assembly)</b> - I am currently taking a course called
             <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1DT038">Computer Architecture 1</a>
@@ -83,13 +92,13 @@
         </center>
         <p>
             <b class="language backend">Haskell</b> - I am currently taking a course called
-            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1DL330">"Functional Programming 1"</a>
+            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1DL330">Functional Programming 1</a>
             that is about functional programming and Haskell. I have learned the basics of Haskell and is currently working on a
             project to implement a so called "UltimateTicTacToeAI" in Haskell. The code is stored at a private repository on GitHub
             but available upon request.
             <br><br>
             <b class="language backend">R</b> - In my third year of university I took a course called
-            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1MS005">"Probability and Statistics"</a>
+            <a target="_blank" title="External link" href="https://www.uu.se/en/study/course?query=1MS005">Probability and Statistics</a>
             where I used the programming language R to calculate different probabilities and statistics. Make note that this wasn't
             a programming course but a course in probability and statistics. I used R on my own for making sure that my hand calculations
             were correct. I also used R to create different graphs to visualize the data I had.

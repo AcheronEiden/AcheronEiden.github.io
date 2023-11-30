@@ -1,0 +1,75 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.one{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.two{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.three{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.four{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.five{
+    grid-column: 1;
+    grid-row: 3;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.six{
+    grid-column: 2;
+    grid-row: 3;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+#font{
+    font-family: sans-serif, serif, monospace;
+}
+#my_name{
+    text-align: center;
+    margin-bottom: 0px;
+}
+#occupation{
+    text-align: center;
+    margin-top: 0px;
+    color: grey;
+    font-size: small;
+}
+h3, #first_paragraph{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#about_me, #education, #rel_exp, #prof_skills, #contact, #hobbies, #reference{
+    text-align: left;
+    color: gray;
+}
+#title{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+}
+a{
+    font-style: italic;
+}
+.ribbon {
+    text-align: justify;
+    width: 100%;
+    word-spacing: 1em;
+}

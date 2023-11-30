@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="sv"> <!-- sv = Swedish, used the ISO 639-1 standard for language codes-->
+<html lang="sv"> 
     <head>
-        <!-- Specifies the character encoding for the HTML document -->
-        <meta charset="UTF-8"> <!-- UTF-8 is recommended-->
-        <!-- Ensures that the page is displayed correctly on mobile (different) devices -->
+        <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Specifies the author of the page -->
         <meta name="author" content="Alhassan Jawad">
-        <!-- Specifies the description of the page -->
         <meta name="description" content="Alhassan Jawad's CV">
-        <!-- Specifies the keywords for search engines -->
         <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawads CV,
         Elektroteknik, Inbyggda System, Robotik, Programmering, Uppsala Universitet,
         Masterstudent, GitHub, LinkedIn, Programmeringsspråk, Signalbehandling,
@@ -19,20 +14,15 @@
         Masterexamen, Masterprogram, GitHub-profil, LinkedIn-profil,
         Programmeringsspråk, Signalbehandling, Automatisk Kontroll, Artificiell Intelligens,
         ML, Maskininlärning">  
-        <!-- Refreshes the page every 30 seconds -->
         <meta http-equiv="refresh" content="30">
-        
-        <!-- Title -->
         <title>Lärarassistent vid Uppsala Universitet</title>
         <script>
             function showPeriod(category) {
                 const allPeriods = document.getElementsByClassName('time');
-
                 for (let i = 0; i < allPeriods.length; i++) {
                     allPeriods[i].style.color = 'black'; // reset the color of all courses
                 }
                 const selectedPeriods = document.getElementsByClassName(category);
-
                 for (let i = 0; i < selectedPeriods.length; i++) {
                     selectedPeriods[i].style.color = 'red'; // set the color of the selected courses
                 }
@@ -62,7 +52,6 @@
         <small onclick="showPeriod('12HT23')">Höst 2023</small> | 
         <small onclick="showPeriod('34VT24')">Vår 2024 (INSHALLAH)</small>
         <ul>
-            <!--Period 1-2 of HT23-->
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD722"><i class="time 12HT23">Programmeringsteknik II 5Hp</i></a> [2023/08/29 - 2023/10/23] [60 timmar totalt]
             </li>
@@ -70,7 +59,6 @@
                 <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD433"><i class="time 12HT23">Programmeringsteknik I 5Hp</i></a> [2023/11/2 - 2023/12/21] [60 timmar totalt]
             </li>
             <br>
-            <!--Period 3 of VT24-->
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD433"><i class="time 34VT24">Programmeringsteknik I 5Hp</i></a> [] [120 timmar totalt]
             </li>
@@ -80,7 +68,6 @@
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD342"><i class="time 34VT24">Introduktion till Beräkningsvetenskap</i></a> [] [120 timmar totalt]
             </li>
-            <!--Period 4 of VT24-->
             <br>
             <li>
                 <a target="_blank" title="External link" href="https://www.uu.se/utbildning/kurs?query=1TD433"><i class="time 34VT24">Programmeringsteknik I 5Hp</i></a> [] [120 timmar totalt]

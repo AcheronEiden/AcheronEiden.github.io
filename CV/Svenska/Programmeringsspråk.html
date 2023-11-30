@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="sv"> <!--sv = Swedish, used the ISO 639-1 standard for language codes-->
+<html lang="sv"> 
     <head>
-        <!-- Specifies the character encoding for the HTML document -->
-        <meta charset="UTF-8"> <!-- UTF-8 is recommended-->
-        <!-- Ensures that the page is displayed correctly on mobile (different) devices -->
+        <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Specifies the author of the page -->
         <meta name="author" content="Alhassan Jawad">
-        <!-- Specifies the description of the page -->
         <meta name="description" content="Alhassan Jawads CV">
-        <!-- Specifies the keywords for search engines -->
         <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawads CV,
         Elektroteknik, Inbyggda System, Robotik, Programmering, Uppsala Universitet,
         Masterstudent, GitHub, LinkedIn, Programmeringsspråk, Signalbehandling,
@@ -19,20 +14,16 @@
         Masterexamen, Masterprogram, GitHub-profil, LinkedIn-profil,
         Programmeringsspråk, Signalbehandling, Automatisk Kontroll, Artificiell Intelligens,
         ML, Maskininlärning">   
-        <!-- Refreses the page every 30 seconds -->
         <meta http-equiv="refresh" content="30">
 
-        <!-- Title -->
         <title>Programmeringsprogram och språk</title>
         <script>
             function showLanguages(category) {
                 const allLanguages = document.getElementsByClassName('language');
-
                 for (let i = 0; i < allLanguages.length; i++) {
                     allLanguages[i].style.color = 'black'; // reset the color of all languages
                 }
                 const selectedLanguages = document.getElementsByClassName(category);
-
                 for (let i = 0; i < selectedLanguages.length; i++) {
                     selectedLanguages[i].style.color = 'red'; // set the color of the selected languages
                 }
@@ -40,9 +31,8 @@
         </script>
     </head>
     <body>
-        <!--Programming languages-->
         <h3>Programspråk jag har erfarenhet av:</h3>
-        <hr> <!--Make a line-->
+        <hr> 
         Visa (klicka på den typ av språk du vill se): <br>
         <li>
             <b onclick="showLanguages('frontend')">Frontend programmeringsspråk</b> <br>
@@ -54,14 +44,12 @@
             <h4>Objektorienterade programmeringsspråk:</h4>
         </center>
         <p>
-            <!--Python-->
             <b class="language backend">Python</b> - Det första programmeringsspråket jag lärde mig. Jag har programmerat i Python i cirka 4 år nu.
             Under mitt andra år på universitetet tog jag en kurs i Python och lärde mig grunderna i språket. Efter det blev jag
             förälskad i programmering och har sedan dess spenderat mer tid på att lära mig språket. På min fritid har jag
             använt Python för att skapa olika projekt. Alla projekt är tillgängliga på min GitHub-sida. De flesta av dem är privata,
             men om du är intresserad av att se dem, kontakta mig så ger jag dig åtkomst till dem.
             <br><br>
-            <!--C++-->
             <b class="language backend">C++</b> - Det andra programmeringsspråket jag lärde mig. Jag har programmerat i C++ i cirka 2 år nu. Jag lärde mig
             språket främst för en kurs jag tog som kallas <br>
             <a target="_blank" title="Extern länk" href="https://www.uu.se/utbildning/kurs?query=1TE723">"Mikrokontrollerprogrammering"</a>.
@@ -70,7 +58,6 @@
             animationer. Koden för det projektet finns också på min GitHub-sida och lagras i en
             <a target="_blank" title="Extern länk till ett offentligt repository" href="https://github.com/AcheronEiden/MicrocontrollerProgramming">offentligt repository</a>.
             <br><br>
-            <!--JavaScript-->
             <b class="language frontend">JavaScript</b> - Lärde mig detta språk tillsammans med HTML och CSS förra sommaren (2023) för att skapa en webbplats för det här CV:et.
             Jag har använt JavaScript för att skapa olika funktioner för webbplatsen. Till exempel funktionen som gör navigeringen
             responsiv när skärmen är liten. Jag använde också JavaScript för att skapa en funktion som får navigationsfältet
@@ -80,11 +67,9 @@
             <h4>Procedurorienterade programmeringsspråk:</h4>
         </center>
         <p>
-            <!--C-->
             <b class="language backend">C</b> - Lärde mig grunderna om detta språk tillsammans med C++ för kursen
             <a target="_blank" title="Extern länk" href="https://www.uu.se/utbildning/kurs?query=1TE723">"Mikrokontrollerprogrammering"</a>.
             <br><br>
-            <!--Assembly (MIPS assembly)-->
             <b class="language backend">Assembly (MIPS assembly)</b> - Jag tar för närvarande en kurs som heter
             <a target="_blank" title="Extern länk" href="https://www.uu.se/utbildning/kurs?query=1DT038">"Datorarkitektur 1"</a>
             som handlar om datorarkitektur och assembly-programmering. Jag har lärt mig grunderna i MIPS assembly-programmering och arbetar för närvarande med olika program i MIPS assembly. Anledningen till att jag valde att lära mig MIPS assembly är för att jag vill
@@ -96,14 +81,12 @@
             <h4>Funktionella programmeringsspråk:</h4>
         </center>
         <p>
-            <!--Haskell-->
             <b class="language backend">Haskell</b> - Jag tar för närvarande en kurs som heter
             <a target="_blank" title="Extern länk" href="https://www.uu.se/utbildning/kurs?query=1DL330">"Funktionell Programmering 1"</a>
             som handlar om funktionell programmering och Haskell. Jag har lärt mig grunderna i Haskell och arbetar för närvarande med ett
             projekt för att implementera en så kallad "UltimateTicTacToeAI" i Haskell. Koden finns i ett privat repository på GitHub
             men är tillgänglig på begäran.
             <br><br>
-            <!--R-->
             <b class="language backend">R</b> - Under mitt tredje år på universitetet tog jag en kurs som kallas
             <a target="_blank" title="Extern länk" href="https://www.uu.se/utbildning/kurs?query=1MS005">"Sannolikhet och Statistik"</a>
             där jag använde programmeringsspråket R för att beräkna olika sannolikheter och statistik. Observera att detta inte var
@@ -114,44 +97,34 @@
             <h4>Andra språk:</h4>
         </center>
         <p>
-            <!--HTML/CSS-->
             <b class="language frontend">HTML/CSS</b> - Lärde mig dessa språk tillsammans med JavaScript förra sommaren (2023) för att skapa en webbplats för det här CV:et.
             Jag har använt HTML för att skapa strukturen på webbplatsen och CSS för att styla webbplatsen. Jag har också använt CSS för att göra webbplatsen responsiv när skärmen är liten. Dessutom använde jag CSS för att styla navigationsfältet och sidfoten.
         </p>
         <hr>
-        <!--Programvaror för programmering-->
         <h3>Programvaror för programmering jag har erfarenhet av:</h3>
-        <hr> <!--Make a line-->
+        <hr> 
         <p>
-            <!--GitHub-->
             <b>GitHub</b> - Jag har använt GitHub för att lagra mina projekt och samarbeta med andra människor på olika projekt.
             GitHub är något jag började använda ganska nyligen men jag har lärt mig grunderna och använder det för närvarande
             för att lagra allt möjligt.
             <br><br>
-            <!--MatLab-->
             <b>MatLab</b> - Under hela mina universitetsstudier har jag använt MatLab för att lösa olika matematiska problem. Som våra professorer
             säger, "MatLab är ett kraftfullt verktyg som varje ingenjör bör veta hur man använder". Jag har använt MatLab för att lösa olika problem
             från att lösa ett system av linjära ekvationer till att lösa ett system av differentialekvationer. Jag har också använt MatLab för att
             skapa olika diagram för att visualisera den data jag hade.
             <br><br>
-            <!--LabView-->
             <b>LabView</b> - Jag har använt LabView för att skapa olika program för att styra olika elektriska komponenter. Jag har använt
             LabView för att programmera en PID-regulator för en hiss som vi använde i ett 3-månaders projekt.
             <br><br>
-            <!--Simulink-->
             <b>Simulink</b> - Jag har använt Simulink för att simulera olika elektriska komponenter.
             <br><br>
-            <!--SolidWorks-->
             <b>SolidWorks</b> - Jag använde SolidWorks förra året i en kurs för att skapa olika CAD-modeller.
             <br><br>
-            <!--LTSpice/PSpice-->
             <b>LTSpice/PSpice</b> - Jag använde LTSpice och PSpice under hela mina universitetsstudier
             för att simulera olika elektriska komponenter.
             <br><br>
-            <!--Visual Studio Code (VSC)-->
             <b>Visual Studio Code (VSC)</b> - Min huvudprogramvara för programmering som jag alltid har använt sedan 2020.
             <br><br>
-            <!--Arduino IDE-->
             <b>Arduino IDE</b> - Jag har använt den här programvaran för att göra projekt inom elektroteknik som sträcker sig från att styra en spänningsregulator
             till att programmera en PID-regulator för en hiss. Jag har också använt denna programvara tillsammans med VSC för att programmera en extern skärm tillsammans
             med några LED-lampor för att visa olika animationer.

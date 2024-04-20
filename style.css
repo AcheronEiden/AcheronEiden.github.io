@@ -78,13 +78,11 @@ a{
 }
 .text-box {
     margin-left: 20px;
-    width: 50%;
 }
 .text-box h3 {
     color: #333;
 }
 table {
-    width: 90%;
     border-collapse: collapse;
 }
 th, td {
@@ -94,4 +92,10 @@ th, td {
 }
 th {
     background-color: #f2f2f2;
+}
+
+/* Added to make page fill screen no matter the the monitor size */
+.allpage {
+    height: 100%;
+    width: 100%;
 }

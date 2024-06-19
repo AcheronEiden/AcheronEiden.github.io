@@ -1,69 +1,248 @@
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+/* General body styles for the entire website */
+body {
+    background-color: #0a0e13;   /* Dark background color */
+    color: #ffffff;               /* White text color */
+    font-family: sans-serif;     /* Generic sans-serif font */
+    margin: 0;                   /* Remove default margin */
+    overflow-y: hidden; /* Prevent container from scrolling on small screens */
 }
-.one{
-    grid-column: 1;
-    grid-row: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-.two{
-    grid-column: 2;
-    grid-row: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-.three{
-    grid-column: 1;
-    grid-row: 2;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-.four{
-    grid-column: 2;
-    grid-row: 2;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-.five{
-    grid-column: 1;
-    grid-row: 3;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-.six{
-    grid-column: 2;
-    grid-row: 3;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-#font{
-    font-family: sans-serif, serif, monospace;
-}
-#my_name{
+
+/* Center align the name and title */
+.name, 
+.title {
     text-align: center;
-    margin-bottom: 0px;
 }
-#occupation{
-    text-align: center;
-    margin-top: 0px;
-    color: grey;
-    font-size: small;
+
+/* Add spacing below the title */
+.title {
+    margin: 10px 0; 
 }
-h3, #first_paragraph{
-    margin-top: 0px;
-    margin-bottom: 0px;
+
+/* Basic styling for the main container */
+.container {
+    display: flex;           /* Use Flexbox for layout */
+    margin-top: 5%;           /* Add top margin for spacing */
+    flex-direction: row;      /* Arrange items horizontally (left to right) */
+    overflow-y: hidden; /* Prevent container from scrolling on small screens */
+}
+
+/* Left box styling */
+.left {
+    width: 25%;                  /* 25% width of the parent container */
+    margin-left: 14%;            /* Add left margin for spacing */
+    padding: 20px;               /* Add padding inside the box */
+    height: 40%;                 /* Fixed height of 40% */
+    border: 2px solid #15202B;   /* Dark border */
+    background-color: #15202B;   /* Dark background color */
+    border-radius: 10px;         /* Rounded corners */
+    margin-right: 20px;          /* Add right margin for spacing */
+    box-shadow: 5px 5px 10px rgba(1, 1, 0, 0.5) inset;  /* Inset box shadow */
+
+    /* Center the content within the box */
+    display: flex;              /* Use Flexbox for centering */
+    flex-direction: column;     /* Stack content vertically */
+    justify-content: center;   /* Vertically center content */
+    align-items: center;      /* Horizontally center content */
+}
+
+/* Right box styling */
+.right {
+    width: 37%;                  /* 37% width of the parent container */
+    padding: 20px;               /* Add padding inside the box */
+    margin-left: 1%;             /* Add left margin for spacing */
+    border: 2px solid #15202B;   /* Dark border */
+    background-color: #15202B;   /* Dark background color */
+    border-radius: 10px;         /* Rounded corners */
+    box-shadow: 5px 5px 10px rgba(1, 1, 0, 0.5) inset;  /* Inset box shadow */
+    overflow-y: scroll;                   /* Enable scrolling within the right box */
+    height: 79.1vh;                       /* Match height to left box */
+}
+/* Hide scrollbar for the right box but still enable scrolling */
+.right::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Image Styling */
+img {
+    width: 100%;                /* Image takes full width of its container */
+    border-radius: 50%;        /* Makes the image round */
+}
+
+/* Heading styles */
+h1, h3 {
+    margin: 10px 0;             /* Add consistent top/bottom margin to headings */
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.6;           /* Increase line height for better readability */
+}
+
+/* Unordered list styles */
+ul {
+    padding: 0;                /* Remove default padding */
+    list-style: none;         /* Remove default list markers */
+}
+
+/* List item styles */
+li {
+    margin-bottom: 5px;       /* Add space between list items */
+    padding-left: 20px;       /* Add padding to create space for bullet point */
+    position: relative;       /* Needed for bullet point positioning */
+}
+
+/* Create custom bullet points for the list items */
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center bullet point vertically */
+    width: 10px;
+    height: 10px;
+    background-color: #f0c808; /* Gold bullet point color */
+    border-radius: 50%;       /* Make bullet point round */
+}
+/* Link Styles */
+a { /* Styles for all links */
+    color: #f0c808;           /* Gold color for links */
+    text-decoration: none;   /* Remove default underline */
+}
+
+a:hover { /* Styles for links when hovered over */
+    text-decoration: underline; /* Add underline on hover */
+    color: lightgray;        /* Change color to light gray on hover */
+}
+
+/* Navigation Bar Styles */
+.navigation { 
+    display: flex;             /* Use Flexbox for layout */
+    justify-content: center;   /* Center items horizontally */
+    gap: 20px;                 /* Add space between navigation links */
+    margin-bottom: 20px;       /* Add bottom margin to separate from content */
+}
+
+.navigation a {
+    margin-left: 10px; /* Add left margin for spacing between links */
+}
+
+/* Location Information Styles */
+.location-info { 
+    display: flex;             /* Use Flexbox for layout */
+    align-items: center;      /* Vertically center items */
+    justify-content: center;   /* Horizontally center items */
+}
+
+.location-info ion-icon { 
+    font-size: 1.2em;        /* Increase icon size */
+    color: #f0c808;           /* Gold color for icon */
+    margin-right: 10px;       /* Add right margin for spacing */
+    display: flex;             /* Use Flexbox to center icon vertically */
+    align-items: center;      /* Vertically center icon */
+}
+
+.location-text p { /* Styles for paragraph within location text */
+    color: #f0c808;           /* Gold color for location text */
+    font-size: 0.9em;        /* Slightly smaller font size */
+    margin: 0;               /* Remove default margin */
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;             /* Use Flexbox for layout */
+    justify-content: left;   /* Align items to the left (default) */
+    margin-top: 10px;         /* Add top margin for spacing */
+}
+
+/* Contact Info Container Styles */
+.contact-info {
+    text-align: center;          /* Center align text within the container */
+    margin-top: 20px;            /* Add top margin for spacing */
+    display: flex;             /* Use Flexbox for layout */
+    align-items: center;      /* Vertically center items */
+    flex-wrap: wrap;          /* Allow items to wrap to the next line */
+    gap: 10px;                 /* Add space between location and social links */
+}
+
+/* Location Information Row Styles */
+.location-info {
+    display: flex;             /* Use Flexbox for layout */
+    align-items: center;      /* Vertically center items (icon and text) */
+    margin: 0;                 /* Remove default top margin */
+}
+
+/* Social Links Container Styles */
+.social-links {
+    display: flex;             /* Use Flexbox for layout */
+    gap: 2px;                 /* Add 2px space between social media icons */
+    margin: 0;                 /* Remove default top margin */
+}
+
+.social-links a { /* Styles for individual social link anchors */
+    display: flex;              /* Use Flexbox to center icon within link */
+    align-items: center;       /* Vertically center icon */
+    justify-content: center;    /* Horizontally center icon */
+    margin: 0 5px;              /* Add small margin around each link */
+    width: 100%;               /* Make each link take full width of container */
+}
+
+.social-links i { /* Styles for Font Awesome icons within links */
+    font-size: 1.2em;        /* Increase icon size */
+    margin-right: 5px;       /* Add right margin to separate icon from text */
+}
+
+/* Location Icon Styles */
+.location-icon {
+    width: 24px;           /* Set icon width */
+    height: 24px;           /* Set icon height */
+    margin-right: 10px;    /* Add right margin to separate icon from text */
+}
+
+/* Hero Image (Placeholder) */
+.hero-image {
+    background-image: url('your-background-image.jpg'); /* Set placeholder image */
+    background-size: cover;    /* Cover the entire container with the image */
+    width: 40%;               /* Set the width (adjust as needed) */
+}
+
+/* About Section Styles */
+.about-section {
+    width: 60%;               /* Set the width (adjust as needed) */
+    padding: 20px;           /* Add padding around the content */
+}
+
+/* Contact Title Styles */
+.contact-title {
+    text-align: left;         /* Align text to the left */
+    color: #f0c808;           /* Gold color for the title */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { 
+    .container {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        overflow-y: auto; /* Enable scrolling for the entire container */
+    }
+
+    .left, .right {
+        width: 90%; /* Take up most of the screen width */
+        margin: 20px auto; /* Center boxes with auto margins */
+        position: static;  /* Remove fixed positioning for smaller screens */
+        height: auto;       /* Allow boxes to adjust height based on content */
+    }
+
+    .right {
+        margin-top: 0; /* Remove extra margin on top of right box */
+    }
 }
 #about_me, #education, #rel_exp, #prof_skills, #contact, #hobbies, #reference{
     text-align: left;
-    color: gray;
+    color: #f0c808;           /* Gold color for icon */;
 }
 #title{
     margin-top: 0px;
     margin-bottom: 0px;
-    color: black;
+    color: #f0c808;           /* Gold color for icon */;
 }
 a{
     font-style: italic;
@@ -72,10 +251,4 @@ a{
     text-align: justify;
     width: 100%;
     word-spacing: 1em;
-}
-
-/* Added to make page fill screen no matter the the monitor size */
-.allpage {
-    height: 100%;
-    width: 100%;
 }

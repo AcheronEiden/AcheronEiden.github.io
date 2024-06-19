@@ -1,59 +1,145 @@
+<!-- Document type declaration -->
 <!DOCTYPE html>
 
-<html lang="en"> 
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Alhassan Jawad">
-        <meta name="description" content="Alhassan Jawad's Website">
-        <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawad's CV,
-        Electrical Engineering, Embedded Systems, Robotics, Programming, Uppsala University,
-        Master's Student, GitHub, LinkedIn, Programming Languages, Signal Processing,
-        Automation, Control Theory, AI, Machine Learning, MatLab, MATLAB, matlab,
-        Electrical Engineer, Embedded System, Robot, Programmer, Uppsala Uni,
-        Master's Degree, Master's Program, GitHub Profile, LinkedIn Profile,
-        Programming Language, Signal Process, Automatic Control, Artificial Intelligence,
-        ML, Machine Learn, Python, C++, C, Java, JavaScript, HTML, CSS, PHP, SQL, Assembly,
-        Assembly Language, VHDL, FPGA, Field Programmable Gate Array, FPGA Programming">
-        <meta http-equiv="refresh" content="30">
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="allpage">
-            <div class="ribbon">
-                <h3>
-                    <a target="_self" title="Homepage" href="index.html">Home</a>
-                    <a target="_self" title="Publications" href="Publications/Publications.html">Publications</a>
-                    <a target="_self" title="CV" href="CV/CV_main.html">CV</a>
-                    <a target="_self" title="Programming projects" href="Portfolio/Portfolio.html">Portfolio</a>
-                </h3>
+<!-- HTML element, specifies the language as English -->
+<html lang="en">
+
+<!-- Head section, contains metadata about the document -->
+
+<head>
+    <!-- Character encoding, specifies the character set used in the document -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport settings, controls the zoom level and layout of the page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Author metadata, specifies the author of the document -->
+    <meta name="author" content="Alhassan Jawad">
+
+    <!-- Description metadata, provides a brief description of the document -->
+    <meta name="description" content="Alhassan Jawad's Website">
+
+    <!-- Keywords metadata, specifies keywords related to the document -->
+    <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawad's CV, Electrical Engineering, Embedded Systems, Robotics, Programming, Uppsala University,
+        Master's Student, GitHub, LinkedIn, Programming Languages, Signal Processing, Automation, Control Theory, AI, Machine Learning, MatLab, MATLAB, matlab,
+        Electrical Engineer, Embedded System, Robot, Programmer, Uppsala Uni, Master's Degree, Master's Program, GitHub Profile, LinkedIn Profile, Programming Language,
+        Signal Process, Automatic Control, Artificial Intelligence, ML, Machine Learn, Python, C++, C, Java, JavaScript, HTML, CSS, PHP, SQL, Assembly, Assembly Language,
+        VHDL, FPGA, Field Programmable Gate Array, FPGA Programming">
+
+    <!-- Refresh metadata, refreshes the page every 30 seconds -->
+    <meta http-equiv="refresh" content="30">
+
+    <!-- Link to external stylesheet, styles the page -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to Font Awesome library, provides icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Title of the page, displayed in the browser title bar -->
+    <title>About Me</title>
+</head>
+
+<!-- Body section, contains the content of the page -->
+
+<body>
+    <!-- Container element, wraps the entire page content -->
+    <div class="container">
+        <!-- Left column, contains the profile information -->
+        <div class="left">
+            <!-- Profile image -->
+            <img src="SelfieXD.jpg" alt="Alhassan Jawad" class="profile-image">
+
+            <!-- Name and title -->
+            <h1 class="name" title="Alhassan Jawad">Alhassan Jawad</h1>
+            <p class="title">Master's Student in Electrical Engineering</p>
+
+            <!-- Chevron-down icon, indicates more information -->
+            <ion-icon name="chevron-down"></ion-icon>
+
+            <!-- Separator line -->
+            <div class="separator"></div>
+
+            <!-- Icon box, contains the location icon -->
+            <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
             </div>
-            <hr>
-            <div class="container">
-                <img src="SelfieXD.jpg" alt="A picture of Alhassan Jawad" height="300">
-                <div class="text-box">
-                    <h3>Current Plans as of Spring 2024:</h3>
-                    <ul>
-                        <li>Finish my Master's Degree in Electrical Engineering at Uppsala University.</li>
-                        <li>If possible, pursue a PHD's degree in Information Technology.</li>
-                        <li>Get a job in the field of Electrical Engineering or Programming.</li>
-                    </ul>
+
+            <!-- Contact information -->
+            <div class="contact-info">
+                <!-- Location information -->
+                <div class="location-info">
+                    <!-- Location icon -->
+                    <img src="location.png" alt="Location Icon" class="location-icon">
+
+                    <!-- Location text -->
+                    <div class="location-text">
+                        <p class="contact-title">LOCATION</p>
+                        <address style="color: #f0c808;">Stockholm, Sweden</address>
+                    </div>
+                </div>
+
+                <!-- Social links -->
+                <div class="social-links">
+                    <!-- Mail link -->
+                    <div class="mail">
+                        <a style="color: #f0c808;" href="mailto:alhassan0000@yahoo.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <!-- GitHub link -->
+                    <div class="github">
+                        <a target="_blank" style="color: #f0c808;" href="https://github.com/AcheronEiden"
+                            class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <p>
-                Hi, the name is Alhassan Jawad and I am currently pursuing a master's degree in Electrical Engineering
-                at <a target="_blank" href="https://www.uu.se/">Uppsala University</a>, Uppsala, Sweden.
-                In addition to my studies, I have a strong and deep passion for everything computer-related, mainly backend and frontend programming.
-                <br>
-                Within my studies, I have specialized in Control of Electrical Systems.
-                My main skills are in Control Theory & Automatic System Creation (+Robotics), Backend Programming and Micro-controller Programming
-                <br><br>
-                Good that you stumbled upon this page because here you can find a link
-                to my CV and much more. For any questions, please contact me
-                on the provided contact information found under the [Contact] section of the CV.
-            </p>
-            <hr>
         </div>
-    </body>
+
+        <!-- Right column, contains the navigation and content -->
+        <div class="right">
+            <!-- Navigation menu -->
+            <div class="navigation">
+                <!-- Link to About Me page -->
+                <a target="_self" href="index.html">About Me</a>
+
+                <!-- Link to Resume page -->
+                <a target="_self" href="CV/CV_main.html">Resume</a>
+
+                <!-- Link to Publications page -->
+                <a target="_self" href="Publications/Publications.html">Publications</a>
+
+                <!-- Link to Portfolio page -->
+                <a target="_self" href="Portfolio/Portfolio.html">Portfolio</a>
+            </div>
+
+            <!-- About Me section -->
+            <div class="about-me">
+                <h3>About Me</h3>
+                <p>I am currently pursuing a master's degree in Electrical Engineering at Uppsala University, Uppsala,
+                    Sweden.
+                    I also have a strong and deep passion for everything computer-related, mainly
+                    backend and frontend programming.</p>
+                <p>Within my electrical studies, I have specialized in Control of Electrical Systems. My main skills are
+                    in Control
+                    Theory & Automatic System Creation (+Robotics), Backend Programming and Micro-controller
+                    Programming.
+                </p>
+            </div>
+
+            <!-- Current Plans section -->
+            <div class="plans">
+                <h3>Current Plans as of Summer 2024:</h3>
+                <ul>
+                    <li>Finish my Master's Degree in Electrical Engineering at Uppsala University.</li>
+                    <li>Get a job in the field of Electrical Engineering or Programming.</li>
+                    <li>If possible, pursue a PHD's degree in Information Technology.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

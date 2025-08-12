@@ -1,146 +1,1065 @@
-<!-- Document type declaration -->
 <!DOCTYPE html>
-
-<!-- HTML element, specifies the language as English, used the ISO 639-1 standard for language codes -->
 <html lang="en">
 
-<!-- Head section, contains metadata about the document -->
-
 <head>
-    <!-- Character encoding, specifies the character set used in the document -->
-    <meta charset="UTF-8"> <!-- UTF-8 is recommended-->
-
-    <!-- Viewport settings, controls the zoom level and layout of the page -->
-    <!-- Ensures that the page is displayed correctly on mobile (different) devices -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Author metadata, specifies the author of the document -->
+    <title>Alhassan Jawad - Full-Stack Developer & Electrical Engineer</title>
+    <meta name="description" content="Full-Stack Developer and Electrical Engineer
+    specializing in control systems, embedded programming, and web development. Based in Stockholm, Sweden.">
+    <meta name="keywords" content="Full-Stack Developer, Electrical Engineer,
+        Python, JavaScript, Control Systems, Uppsala University, Stockholm,
+        Embedded Systems, Web Development, Robotics, Machine Learning, IoT,
+        SEO, Programming, Teaching Assistant, Project Management, Resume,
+        Portfolio, Publications, Certificates, Cybersecurity, AI, Cloud Computing,
+        Artificial Intelligence, Data Science, Information Technology, Software Development,
+        Backend Development, Frontend Development">
     <meta name="author" content="Alhassan Jawad">
 
-    <!-- Description metadata, provides a brief description of the document -->
-    <meta name="description" content="Alhassan Jawad's Website">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alhassan Jawad - Full-Stack Developer & Electrical Engineer">
+    <meta property="og:description" content="Professional portfolio showcasing expertise
+        in electrical engineering and software development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alhassanjawad.com">
 
-    <!-- Keywords metadata, specifies keywords (related to the document) for the search engine -->
-    <meta name="keywords" content="CV, Alhassan Jawad, Alhassan, Jawad, Alhassan Jawad's CV, Electrical Engineering, Embedded Systems, Robotics, Programming, Uppsala University,
-        Master's Student, GitHub, LinkedIn, Programming Languages, Signal Processing, Automation, Control Theory, AI, Machine Learning, MatLab, MATLAB, matlab,
-        Electrical Engineer, Embedded System, Robot, Programmer, Uppsala Uni, Master's Degree, Master's Program, GitHub Profile, LinkedIn Profile, Programming Language,
-        Signal Process, Automatic Control, Artificial Intelligence, ML, Machine Learn, Python, C++, C, Java, JavaScript, HTML, CSS, PHP, SQL, Assembly, Assembly Language,
-        VHDL, FPGA, Field Programmable Gate Array, FPGA Programming">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Refresh metadata, refreshes the page every 30 seconds -->
-    <meta http-equiv="refresh" content="30">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 
-    <!-- Link to external stylesheet, styles the page -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Link to Font Awesome library, provides icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Title of the page, displayed in the browser title bar -->
-    <title>About Me</title>
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<!-- Body section, contains the content of the page -->
-
 <body>
-    <!-- Container element, wraps the entire page content -->
-    <div class="container">
-        <!-- Left column, contains the profile information -->
-        <div class="left">
-            <!-- Profile image -->
-            <img src="SelfieXD.jpg" alt="Alhassan Jawad" class="profile-image">
-
-            <!-- Name and title -->
-            <h1 class="name" title="Alhassan Jawad">Alhassan Jawad</h1>
-            <p class="title">Master's Student in Electrical Engineering</p>
-
-            <!-- Chevron-down icon, indicates more information -->
-            <ion-icon name="chevron-down"></ion-icon>
-
-            <!-- Separator line -->
-            <div class="separator"></div>
-
-            <!-- Icon box, contains the location icon -->
-            <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Alhassan Jawad</h2>
             </div>
-
-            <!-- Contact information -->
-            <div class="contact-info">
-                <!-- Location information -->
-                <div class="location-info">
-                    <!-- Location icon -->
-                    <img src="location.png" alt="Location Icon" class="location-icon">
-
-                    <!-- Location text -->
-                    <div class="location-text">
-                        <p class="contact-title">LOCATION</p>
-                        <address style="color: #f0c808;">Stockholm, Sweden</address>
-                    </div>
-                </div>
-
-                <!-- Social links -->
-                <div class="social-links">
-                    <!-- Mail link -->
-                    <div class="mail">
-                        <a style="color: #f0c808;" href="mailto:alhassan0000@yahoo.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-
-                    <!-- GitHub link -->
-                    <div class="github">
-                        <a target="_blank" style="color: #f0c808;" href="https://github.com/AcheronEiden"
-                            class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home">Home</a>
+                <a href="#skills" class="nav-link" data-page="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-page="contact">Contact Information</a>
+                <a href="#portfolio" class="nav-link" data-page="portfolio">Portfolio</a>
+                <a href="#publications" class="nav-link" data-page="publications">Publications</a>
+                <a href="#certificates" class="nav-link" data-page="certificates">Certificates</a>
+                <a href="#resume" class="nav-link" data-page="resume">Resume</a>
+            </div>
+            <div class="nav-hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+    </nav>
 
-        <!-- Right column, contains the navigation and content -->
-        <div class="right">
-            <!-- Navigation menu -->
-            <div class="navigation">
-                <!-- Link to About Me page -->
-                <a target="_self" href="index.html">About Me</a>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="profile-image-container">
+                            <img src="profile-image.png" alt="Alhassan Jawad" class="profile-image">
+                        </div>
+                        <h1 class="hero-title">Alhassan Jawad</h1>
+                        <p class="hero-subtitle">Full-Stack Developer</p>
 
-                <!-- Link to Resume page -->
-                <a target="_self" href="CV/CV_main.html">Resume</a>
+                        <div class="hero-info">
+                            <div class="info-item">
+                                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <span>Stockholm, Sweden</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                <span>alhassan000@yahoo.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                                <span>+46 76 281 8440</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <!-- Link to Publications page -->
-                <a target="_self" href="Publications/Publications.html">Publications</a>
+            <!-- About Me Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="text-large">
+                                I am a newly graduated Master of Science in Electrical Engineering
+                                with a specialization in the control of electrical systems and embedded
+                                systems programming. With a solid academic background and hands-on expertise
+                                in programming, machine learning, and electrical control systems, I bring both
+                                theoretical knowledge and practical experience to innovative technological projects.
+                            </p>
 
-                <!-- Link to Portfolio page -->
-                <a target="_self" href="Portfolio/Portfolio.html">Portfolio</a>
-            </div>
+                            <p class="text-large">
+                                During my recent role as a Programming & SEO Analyst at Bonn Bonn AB,
+                                I established comprehensive website architectures and integrated different payment
+                                systems
+                                while optimizing email marketing campaigns. My experience as a Teaching Assistant at
+                                Uppsala University allowed me to guide over 50 students per semester in programming
+                                concepts,
+                                developing course materials and addressing complex technical inquiries.
+                            </p>
 
-            <!-- About Me section -->
-            <div class="about-me">
-                <h3>About Me</h3>
-                <p>I am currently pursuing a master's degree in Electrical Engineering at Uppsala University, Uppsala,
-                    Sweden.
-                    I also have a strong and deep passion for everything computer-related, mainly
-                    backend and frontend programming.</p>
-                <p>Within my electrical studies, I have specialized in Control of Electrical Systems. My main skills are
-                    in Control
-                    Theory & Automatic System Creation (+Robotics), Backend Programming and Micro-controller
-                    Programming.
-                </p>
-            </div>
+                            <div class="skills-section">
+                                <h3>Top 5 Technical Skills</h3>
+                                <div class="badge-container">
+                                    <span class="badge">Full-Stack Development</span>
+                                    <span class="badge">Python & Machine Learning</span>
+                                    <span class="badge">Independent Learning</span>
+                                    <span class="badge">System Optimization</span>
+                                    <span class="badge">Project Management</span>
+                                </div>
+                            </div>
 
-            <!-- Current Plans section -->
-            <div class="plans">
-                <h3>Current Plans as of 2025:</h3>
-                <ul>
-                    <li>Finish my Master's Degree in Electrical Engineering at Uppsala University.</li>
-                    <li>Get a job in the field of Electrical Engineering or Programming.</li>
-                    <li>If possible, pursue a PHD's degree in Information Technology.</li>
-                </ul>
-            </div>
+                            <p class="text-large">
+                                I am passionate about tackling new challenges and contributing to cutting-edge projects
+                                that
+                                push the boundaries of technology. My goal is to apply my technical expertise in
+                                environments
+                                where innovation and continuous learning are valued, whether in software development,
+                                embedded systems, or emerging technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="section section-alt">
+                <div class="container">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <div class="experience-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3>Programmer & SEO Analyst</h3>
+                                    <p class="company">Bonn Bonn AB</p>
+                                    <span class="badge badge-outline">Freelance/Contract</span>
+                                </div>
+                                <span class="date">Jun 2025 - Aug 2025</span>
+                            </div>
+                            <div class="card-content">
+                                <ul class="job-duties">
+                                    <li>Established the basic structure of the website and
+                                        integrated payment methods and social media</li>
+                                    <li>Fixed an email marketing system with structured strategies,
+                                        and optimized and configured SEO for the website</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3>Teaching Assistant in Programming</h3>
+                                    <p class="company">Uppsala University</p>
+                                </div>
+                                <span class="date">2023 - 2025</span>
+                            </div>
+                            <div class="card-content">
+                                <ul class="job-duties">
+                                    <li>Assisted over 50 students per semester with concept clarification,
+                                        concept explanation, and problem solving</li>
+                                    <li>Graded assignments and examinations</li>
+                                    <li>Collaborated with peers to develop course materials and address student
+                                        inquiries</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3>Project Manager</h3>
+                                    <p class="company">Uppsala University</p>
+                                </div>
+                                <span class="date">Aug 2022 - Dec 2022</span>
+                            </div>
+                            <div class="card-content">
+                                <ul class="job-duties">
+                                    <li>Collaborated with peers and led a team to reduce electricity consumption in a
+                                        commercial building by 35% through real-time data analysis and system
+                                        optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3>Project Member - Signal Processing</h3>
+                                    <p class="company">Uppsala University</p>
+                                </div>
+                                <span class="date">Jan 2022 - Jun 2022</span>
+                            </div>
+                            <div class="card-content">
+                                <ul class="job-duties">
+                                    <li>Developed solutions for signal processing for a specific
+                                        case using MATLAB andPython</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Master of Science (M.Sc.) in Electrical Engineering</h3>
+                                <span class="date">2023-2025</span>
+                            </div>
+                            <div class="card-content">
+                                <p class="institution">Department of Electrical Engineering | Uppsala University</p>
+                                <p class="specialization">Specialization: Control of electrical systems & programming of
+                                    embedded systems</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Bachelor of Science (B.Sc.) in Electrical Engineering</h3>
+                                <span class="date">2019-2022</span>
+                            </div>
+                            <div class="card-content">
+                                <p class="institution">Department of Electrical Engineering | Uppsala University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
+<!-- XXXXXXXXXXXXXXXXXXXXXXXX End of Home Page XXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXX Start of Skills Page XXXXXXXXXXXXXXXXXXXX -->
+        <div id="skills-page" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Technical Skills & Expertise</h2>
+
+                    <!-- Programming Languages -->
+                    <div class="skills-category">
+                        <h3 class="category-title">Programming Languages</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Python</h4>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <p class="skill-description">Data analysis, machine learning, automation</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Java</h4>
+                                    <span class="skill-level">30%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <p class="skill-description">AI applications</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>C/C++</h4>
+                                    <span class="skill-level">30%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <p class="skill-description">System programming, embedded systems</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>TypeScript</h4>
+                                    <span class="skill-level">30%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <p class="skill-description">Adaptive & User-Centric Design</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>JavaScript</h4>
+                                    <span class="skill-level">65%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <p class="skill-description">Modern web design and responsive layouts</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>HTML/CSS</h4>
+                                    <span class="skill-level">70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70%"></div>
+                                </div>
+                                <p class="skill-description">Frontend web development</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Haskell & Assembly (MIPS assembly)</h4>
+                                    <span class="skill-level">30%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <p class="skill-description">Low-level programming</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>R</h4>
+                                    <span class="skill-level">45%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <p class="skill-description">Statistical computing and graphics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="skills-category">
+                        <h3 class="category-title">Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>System Optimization</h4>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <p class="skill-description">Performance tuning and efficiency improvements</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Data Analysis</h4>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <p class="skill-description">Statistical analysis and data visualization + predictive modeling
+                                    + optimization
+                                </p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Machine Learning</h4>
+                                    <span class="skill-level">55%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 55%"></div>
+                                </div>
+                                <p class="skill-description">ML algorithms and model deployment</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Embedded Systems</h4>
+                                    <span class="skill-level">60%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                                <p class="skill-description">Microcontroller programming and IoT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skills-category">
+                        <h3 class="category-title">Soft Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Problem Solving</h4>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <p class="skill-description">Creative thinking and innovative solutions</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Strategic Planning</h4>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <p class="skill-description">Strategic thinking and long-term vision</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Team & Time Management</h4>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <p class="skill-description">Effective team collaboration and project management</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Effective Communication</h4>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <p class="skill-description"> Clear and concise communication with
+                                    technical and non-technical audiences</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Adaptability</h4>
+                                    <span class="skill-level">100%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <p class="skill-description"> Always ready to learn and adapt to new
+                                    technologies and challenges</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <h4>Self-taught</h4>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <p class="skill-description">Programmer with a passion for learning</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="section section-alt">
+                        <div class="container">
+                            <h3 class="category-title">Tools & Technologies</h3>
+                            <div class="tools-grid">
+                                <div class="tool-category">
+                                    <h4>Development Tools</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">Git</span>
+                                        <span class="badge badge-outline">GitHub</span>
+                                        <span class="badge badge-outline">VS Code</span>
+                                        <span class="badge badge-outline">Eclipse</span>
+                                        <span class="badge badge-outline">Jupyter</span>
+                                        <span class="badge badge-outline">MatLab</span>
+                                        <span class="badge badge-outline">LabView</span>
+                                        <span class="badge badge-outline">PSpice & LTspice</span>
+                                        <span class="badge badge-outline">KiCad</span>
+                                        <span class="badge badge-outline">Altium</span>
+                                        <span class="badge badge-outline">Simulink</span>
+                                        <span class="badge badge-outline">SolidWorks</span>
+                                    </div>
+                                </div>
+
+                                <div class="tool-category">
+                                    <h4>Frameworks & Libraries</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">React</span>
+                                        <span class="badge badge-outline">Node.js</span>
+                                        <span class="badge badge-outline">NumPy & SciPy</span>
+                                        <span class="badge badge-outline">Pandas</span>
+                                        <span class="badge badge-outline">Matplotlib</span>
+                                        <span class="badge badge-outline">TensorFlow </span>
+                                    </div>
+                                </div>
+
+                                <div class="tool-category">
+                                    <h4>Databases & Cloud</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">MySQL</span>
+                                        <span class="badge badge-outline">Firebase</span>
+                                        <span class="badge badge-outline">Azure</span>
+                                        <span class="badge badge-outline">Google Cloud</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- XXXXXXXXXXXXXXXXXXXXXXX End of Skills Page XXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXX Start of Contact Page XXXXXXXXXXXXXXXXXXXX -->
+        <div id="contact-page" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="intro-text">
+                        <p>I'm always interested in discussing new opportunities, collaborations, or innovative
+                            projects. Feel free to reach out through any of the channels below.</p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">✉️</div>
+                            <h3>Email</h3>
+                            <p class="contact-value">alhassan000@yahoo.com</p>
+                            <p class="contact-description">Best way to reach me</p>
+                            <a href="mailto:alhassan000@yahoo.com" class="btn btn-outline">Send Email</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">📞</div>
+                            <h3>Phone</h3>
+                            <p class="contact-value">+46 76 281 8440</p>
+                            <p class="contact-description">Available for calls 09:00-20:00 (UTC+1)</p>
+                            <a href="tel:+46762818440" class="btn btn-outline">Call Now</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <h3>Location</h3>
+                            <p class="contact-value">Hässelby Villastad Norra, Stockholm, Sweden</p>
+                            <p class="contact-description">Based in Stockholm, open to remote work</p>
+                            <a href="https://www.google.com/maps/place/Blodboksgränd+15,+165+77+Hässelby/@59.3907139,17.8036854,562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x465fa0210db81ded:0x90c78054e04f4f4b!8m2!3d59.3907113!4d17.8085563!16s%2Fg%2F11pdq5bspk!5m1!1e3?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener"
+                                class="btn btn-outline">View on Map</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <h3>LinkedIn</h3>
+                            <p class="contact-value">linkedin.com/in/alhassanjawad</p>
+                            <p class="contact-description">Connect with me on LinkedIn</p>
+                            <a href="https://linkedin.com/in/alhassanjawad" target="_blank" rel="noopener"
+                                class="btn btn-outline">Visit LinkedIn</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                            <h3>GitHub</h3>
+                            <p class="contact-value">github.com/AzheronElden</p>
+                            <p class="contact-description">Check out my open source projects</p>
+                            <a href="https://github.com/AcheronEiden" target="_blank" rel="noopener"
+                                class="btn btn-outline">Visit GitHub</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">📅</div>
+                            <h3>Availability</h3>
+                            <p class="contact-value">Available for new opportunities</p>
+                            <p class="contact-description">Schedule a meeting to discuss opportunities</p>
+                            <a href="mailto:alhassan000@yahoo.com?subject=Meeting Request" class="btn btn-outline">Send
+                                Email</a>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Call-to-Action -->
+                    <div class="section">
+                        <div class="card section-alt">
+                            <div class="card-content" style="text-align: center;">
+                                <h3 class="category-title">Looking for freelance/contract or long-term employment?</h3>
+                                <p class="intro-text" style="max-width: 600px;">I am currently open to new freelance jobs and other long-term career opportunities. If you're looking for a dedicated and skilled developer, contact me and let's discuss how I can contribute to your team or project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- XXXXXXXXXXXXXXXXXXXXXXX End of Contact Page XXXXXXXXXXXXXXXXXXXXXX -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXX Start of Portfolio Page XXXXXXXXXXXXXXXXXX -->
+        <div id="portfolio-page" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Portfolio & Projects</h2>
+                    <div class="intro-text">
+                        <p>A showcase of my technical projects in electrical engineering, software development,
+                            and full-stack web applications. Each project demonstrates my ability to apply skills
+                            to create innovative and practical solutions.</p>
+                    </div>
+
+                    <div class="portfolio-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">🌐</div>
+                                <div class="project-info">
+                                    <h3>E-commerce Platform with Payment Integration</h3>
+                                    <p class="project-type">Professional Project</p>
+                                    <p class="project-type">Company: Bonn Bonn AB</p>
+                                </div>
+                                <span class="badge badge-deployed">Online</span>
+                            </div>
+                            <span class="badge category-badge">Frontend Development</span>
+                            <div class="project-content">
+                                <p>Built a complete e-commerce website with integrated payment systems, social media
+                                    connectivity, and SEO optimization.</p>
+
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Responsive web design</li>
+                                    <li>Secure payment processing</li>
+                                    <li>Social media integration</li>
+                                    <li>SEO optimization</li>
+                                    <li>Email marketing system</li>
+                                </ul>
+
+                                <h4>Technologies Used</h4>
+                                <div class="badge-container">
+                                    <span class="badge badge-outline">Shopify</span>
+                                    <span class="badge badge-outline">JavaScript</span>
+                                    <span class="badge badge-outline">HTML/CSS</span>
+                                    <span class="badge badge-outline">SEO Tools</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <button class="btn btn-outline" onclick="window.open('https://bonnbonn.se', '_blank', 'noopener');">Visit Store</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">⚡</div>
+                                <div class="project-info">
+                                    <h3>Smart Building Energy Management System</h3>
+                                    <p class="project-type">University Project (Bachelor's Thesis)</p>
+                                    <p class="project-type">Title: Power flexibility in a property</p>
+                                    <p class="project-type">Date: Aug 2022-Dec 2022</p>
+                                </div>
+                                <span class="badge badge-completed">Completed</span>
+                            </div>
+                            <span class="badge category-badge">Electrical Engineering</span>
+                            <div class="project-content">
+                                <p>Led a team project that achieved 35% reduction in electricity consumption for a
+                                    commercial building through real-time data analysis and automated control systems.
+                                </p>
+
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Real-time energy monitoring dashboard</li>
+                                    <li>Predictive maintenance algorithms</li>
+                                    <li>Energy consumption reporting</li>
+                                </ul>
+
+                                <h4>Technologies Used</h4>
+                                <div class="badge-container">
+                                    <span class="badge badge-outline">Python</span>
+                                    <span class="badge badge-outline">MATLAB</span>
+                                    <span class="badge badge-outline">IoT Sensors</span>
+                                    <span class="badge badge-outline">Control Systems</span>
+                                    <span class="badge badge-outline">Data Analytics</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <button class="btn btn-outline" onclick="window.open('https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1678189&dswid=-6938', '_blank', 'noopener');">Read Thesis</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">🔧</div>
+                                <div class="project-info">
+                                    <h3>Signal Processing Framework</h3>
+                                    <p class="project-type">University Project</p>
+                                    <p class="project-type">Date: Jan 2022-Jun 2022</p>
+                                </div>
+                                <span class="badge badge-completed">Completed</span>
+                            </div>
+                            <span class="badge category-badge">Software Development</span>
+                            <br>
+                            <span class="badge category-badge">Electrical Engineering</span>
+                            <div class="project-content">
+                                <p>Developed different signal processing solutions using MATLAB and Python for
+                                    analyzing complex electrical signals and extracting meaningful insights.</p>
+
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Digital filter design and implementation</li>
+                                    <li>Frequency domain analysis tools</li>
+                                    <li>Real-time signal visualization</li>
+                                    <li>Implemented anomaly detection</li>
+                                </ul>
+
+                                <h4>Technologies Used</h4>
+                                <div class="badge-container">
+                                    <span class="badge badge-outline">MATLAB</span>
+                                    <span class="badge badge-outline">Python</span>
+                                    <span class="badge badge-outline">NumPy</span>
+                                    <span class="badge badge-outline">SciPy</span>
+                                    <span class="badge badge-outline">Signal Processing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- XXXXXXXXXXXXXXXXXXXXX End of Portfolio Page XXXXXXXXXXXXXXXXXXXXXX -->
+ <!-- XXXXXXXXXXXXXXXXXXXX Start of Publications Page XXXXXXXXXXXXXXXXX -->
+        <!-- Publications Page -->
+        <div id="publications-page" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Publications & Research</h2>
+                    <div class="publications-list">
+                        <div class="publication-card">
+                            <div class="publication-header">
+                                <div class="publication-icon">📄</div>
+                                <div class="publication-info">
+                                    <span class="badge">Master's Degree Thesis</span>
+                                    <span class="badge category-badge">Electrical Engineering</span>
+                                    <span class="badge category-badge">Uppsala University</span>
+                                    <h3>Improvement of an Automated Aeroponic Plant Cultivation System</h3>
+                                </div>
+                                <span class="badge badge-published">Published</span>
+                            </div>
+                            <div class="publication-content">
+                                <div class="publication-details">
+                                    <div class="detail-section">
+                                        <h4>Authors</h4>
+                                        <p>Alhassan Jawad</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4>Publication Details</h4>
+                                        <p><strong>Year:</strong> 2025</p>
+                                        <p><strong>Pages:</strong> pp. 100</p>
+                                        <p><strong>Citations:</strong> 14</p>
+                                    </div>
+                                </div>
+
+                                <div class="abstract-section">
+                                    <h4>Abstract</h4>
+                                    <p>This thesis presents an automated aeroponic cultivation system, advancing sustainable agriculture by efficiently controlling a plant's environment. The core of the system is a rule-based algorithm on an ESP32 microcontroller that successfully regulates temperature and humidity. The research demonstrates the algorithm's effectiveness in maintaining stable conditions, offering a more reliable and energy-efficient solution for sustainable, small-scale farming.</p>
+                                </div>
+
+                                <div class="keywords-section">
+                                    <h4>Keywords</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">Aeroponics</span>
+                                        <span class="badge badge-outline">IoT Sensors</span>
+                                        <span class="badge badge-outline">MIMO (Multiple-Input Multiple-Output) Systems</span>
+                                        <span class="badge badge-outline">Control algorithm</span>
+                                    </div>
+                                </div>
+
+                                <div class="publication-actions">
+                                    <button class="btn btn-outline" onclick="window.open('masters-degree-thesis-electrical-engineering.pdf', '_blank', 'noopener');">View PDF (Locked until 2028)</button>
+                                    <button class="btn btn-outline" onclick="window.open('https://uu.diva-portal.org', '_blank', 'noopener');">Link (Locked until 2028)</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-card">
+                            <div class="publication-header">
+                                <div class="publication-icon">📄</div>
+                                <div class="publication-info">
+                                    <span class="badge">Bachelor's Degree Thesis</span>
+                                    <span class="badge category-badge">Electrical Engineering</span>
+                                    <span class="badge category-badge">Uppsala University</span>
+                                    <h3>Power flexibility in a property: Independent Project in Electrical Engineering</h3>
+                                </div>
+                                <span class="badge badge-published">Published</span>
+                            </div>
+                            <div class="publication-content">
+                                <div class="publication-details">
+                                    <div class="detail-section">
+                                        <h4>Authors</h4>
+                                        <p>Alhassan Jawad, Andreas Hertzberg, Johan Sundman</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4>Publication Details</h4>
+                                        <p><strong>Year:</strong> 2022</p>
+                                        <p><strong>Pages:</strong> pp. 100</p>
+                                        <p><strong>Citations:</strong> 10</p>
+                                        <p><strong>URN:</strong> urn:nbn:se:uu:diva-479221</p>
+                                        <p><strong>OAI:</strong> oai:DiVA.org:uu-479221</p>
+                                        <p><strong>DiVA, id:</strong> diva2:1678189</p>
+                                    </div>
+                                </div>
+
+                                <div class="abstract-section">
+                                    <h4>Abstract</h4>
+                                    <p>This thesis presents a novel approach to energy optimization in commercial
+                                        buildings using real-time control systems and machine learning algorithms. Our
+                                        method achieved a 35% reduction in energy consumption while maintaining optimal
+                                        comfort levels.</p>
+                                </div>
+
+                                <div class="keywords-section">
+                                    <h4>Keywords</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">Smart Buildings</span>
+                                        <span class="badge badge-outline">Energy Optimization</span>
+                                        <span class="badge badge-outline">Control Systems</span>
+                                        <span class="badge badge-outline">IoT Sensors</span>
+                                    </div>
+                                </div>
+
+                                <div class="publication-actions">
+                                    <button class="btn btn-outline" onclick="window.open('bachelors-degree-thesis-electrical-engineering.pdf', '_blank', 'noopener');">View PDF</button>
+                                    <button class="btn btn-outline" onclick="window.open('https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1678189&dswid=-6938', '_blank', 'noopener');">Link</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- XXXXXXXXXXXXXXXXXXX End of Publications Page XXXXXXXXXXXXXXXXXXXXX -->
+<!-- XXXXXXXXXXXXXXXXXXX Start of Certificates Page XXXXXXXXXXXXXXXXXXX -->
+        <!-- Certificates Page -->
+        <div id="certificates-page" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Professional Certificates & Credentials</h2>
+<!-- What's below is only there until I get certificates -->
+                    <div class="section">
+                        <div class="card section-alt">
+                            <div class="card-content" style="text-align: center;">
+                                <h3 class="category-title">Notice</h3>
+                                <p class="intro-text" style="max-width: 600px;">I currently don't have any professional certificates or certifications to display. Please check back later for updates.</p>
+                            </div>
+                        </div>
+                    </div>
+ <!-- What's above is only there until I get certificates -->
+<!-- Uncomment below to show certificates + have an intro text + have an overview -->
+                    <!-- <div class="intro-text">
+                        <p>A collection of professional certifications that validate my expertise across
+                            cloud computing, software development, cybersecurity, and project management.</p>
+                    </div>
+
+                    <div class="certificates-grid">
+                        <div class="certificate-card">
+                            <div class="certificate-header">
+                                <div class="certificate-icon">🏆</div>
+                                <div class="certificate-info">
+                                    <h3>AWS Certified Solutions Architect - Associate</h3>
+                                    <p class="issuer">Amazon Web Services</p>
+                                </div>
+                                <span class="badge badge-specialized">Specialized</span>
+                            </div>
+                            <div class="certificate-content">
+                                <p>Comprehensive certification covering AWS cloud architecture, security, and best
+                                    practices for designing distributed systems.</p>
+
+                                <div class="certificate-date">
+                                    <h4>Date Obtained</h4>
+                                    <p>March 2024</p>
+                                </div>
+
+                                <div class="skills-validated">
+                                    <h4>Skills Validated</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">Cloud Architecture</span>
+                                        <span class="badge badge-outline">AWS Services</span>
+                                        <span class="badge badge-outline">Security</span>
+                                        <span class="badge badge-outline">Scalability</span>
+                                        <span class="badge badge-outline">Cost Optimization</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-outline">Verify Certificate</button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card">
+                            <div class="certificate-header">
+                                <div class="certificate-icon">🏆</div>
+                                <div class="certificate-info">
+                                    <h3>Certified Kubernetes Administrator (CKA)</h3>
+                                    <p class="issuer">Cloud Native Computing Foundation</p>
+                                </div>
+                                <span class="badge badge-professional">Professional</span>
+                            </div>
+                            <div class="certificate-content">
+                                <p>Hands-on certification demonstrating skills in Kubernetes cluster management,
+                                    troubleshooting, and application lifecycle management.</p>
+
+                                <div class="certificate-date">
+                                    <h4>Date Obtained</h4>
+                                    <p>January 2024</p>
+                                </div>
+
+                                <div class="skills-validated">
+                                    <h4>Skills Validated</h4>
+                                    <div class="badge-container">
+                                        <span class="badge badge-outline">Kubernetes</span>
+                                        <span class="badge badge-outline">Container Orchestration</span>
+                                        <span class="badge badge-outline">DevOps</span>
+                                        <span class="badge badge-outline">Cluster Management</span>
+                                        <span class="badge badge-outline">Troubleshooting</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-outline">Verify Certificate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section section-alt">
+                        <div class="container">
+                            <h3 class="category-title">Certification Overview</h3>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <h4 class="stat-number">0</h4>
+                                    <p>Total Certificates</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h4 class="stat-number stat-number-blue">0</h4>
+                                    <p class="stat-professional-text">Professional Level</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h4 class="stat-number stat-number-purple">0</h4>
+                                    <p class="stat-specialized-text">Specialized Fields</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+<!-- Uncomment above to show certificates + have an intro text + have an overview-->
+                </div>
+            </section>
+        </div>
+<!-- XXXXXXXXXXXXXXXXXXX End of Certificates Page XXXXXXXXXXXXXXXXXXXXX -->
+<!-- XXXXXXXXXXXXXXXXXXX Start of Resume Page XXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <!-- Resume Page -->
+        <div id="resume-page" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Resume & CV Downloads</h2>
+                    <div class="intro-text">
+                        <p>Download my resume in various languages, tailored for different audiences and
+                            regions. If you need a specific format or version, feel free to reach out!</p>
+                    </div>
+
+                    <div class="resume-grid">
+                        <div class="resume-card">
+                            <div class="resume-header">
+                                <div class="resume-icon">📄</div>
+                                <div class="resume-info">
+                                    <h3>Resume - English</h3>
+                                    <p>Concise English resume with relevant experience, education, and project
+                                        details</p>
+                                </div>
+                                <div class="language-flag">EN</div>
+                            </div>
+                            <div class="resume-badges">
+                                <span class="badge badge-full">Concise</span>
+                                <span class="badge badge-outline">PDF</span>
+                            </div>
+                            <div class="resume-content">
+                                <div class="resume-details">
+                                    <div class="detail-item">
+                                        <h4>Language</h4>
+                                        <p>English</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>File Size</h4>
+                                        <p>184 KB</p>
+                                    </div>
+                                </div>
+
+                                <div class="last-updated">
+                                    <h4>📅 Last Updated</h4>
+                                    <p>August 2025</p>
+                                </div>
+
+                                <div class="resume-actions">
+                                    <button class="btn btn-primary" data-action="download" data-file="current-english-cv.pdf">Download</button>
+                                    <button class="btn btn-outline" data-action="preview" data-file="current-english-cv.pdf">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-card">
+                            <div class="resume-header">
+                                <div class="resume-icon">📄</div>
+                                <div class="resume-info">
+                                    <h3>Resume - Swedish</h3>
+                                    <p>Concise Swedish resume with relevant experience, education, and project
+                                        details</p>
+                                </div>
+                                <div class="language-flag">SV</div>
+                            </div>
+                            <div class="resume-badges">
+                                <span class="badge badge-full">Concise</span>
+                                <span class="badge badge-outline">PDF</span>
+                            </div>
+                            <div class="resume-content">
+                                <div class="resume-details">
+                                    <div class="detail-item">
+                                        <h4>Language</h4>
+                                        <p>Swedish</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>File Size</h4>
+                                        <p>185 KB</p>
+                                    </div>
+                                </div>
+
+                                <div class="last-updated">
+                                    <h4>📅 Last Updated</h4>
+                                    <p>August 2025</p>
+                                </div>
+
+                                <div class="resume-actions">
+                                    <button class="btn btn-primary" data-action="download" data-file="current-swedish-cv.pdf">Download</button>
+                                    <button class="btn btn-outline" data-action="preview" data-file="current-swedish-cv.pdf">Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© Alhassan Jawad 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>

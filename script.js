@@ -419,6 +419,88 @@ class StateManager {
     }
 }
 
+// Function to show a binary glitch at a random time and place
+function showDigitalGlitch() {
+    const glitch = document.getElementById('binary-glitch');
+    
+    // Generate a random binary string
+    const binaryString = Array.from({ length: 20 }, () => Math.round(Math.random())).join('');
+
+    // Get a random position on the screen
+    const randomX = Math.random() * (window.innerWidth - 150);
+    const randomY = Math.random() * (window.innerHeight - 150);
+
+    // Position the glitch, set its content, and make it visible
+    glitch.style.left = `${randomX}px`;
+    glitch.style.top = `${randomY}px`;
+    glitch.textContent = binaryString;
+    glitch.style.display = 'block';
+    
+    // Set a timer to make the glitch disappear and reset
+    setTimeout(() => {
+        glitch.style.display = 'none';
+        
+        // Schedule the next appearance at a random interval
+        const minDelay = 0.25 * 60 * 1000; // 15 seconds in milliseconds
+        const maxDelay = 0.5 * 60 * 1000; // 30 seconds in milliseconds
+        const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+        
+        setTimeout(showDigitalGlitch, randomDelay);
+    }, 1000); // Glitch duration is 1 second
+}
+
+// Function to show a spiral animation
+function showSpiralAnimation() {
+    const spiral = document.getElementById('spiral-animation');
+    
+    // Get a random position on the screen
+    const randomX = Math.random() * (window.innerWidth - 300);
+    const randomY = Math.random() * (window.innerHeight - 300);
+
+    // Position the animation and make it visible
+    spiral.style.left = `${randomX}px`;
+    spiral.style.top = `${randomY}px`;
+    spiral.classList.add('active');
+    
+    // Set a timer to make the animation disappear
+    setTimeout(() => {
+        spiral.classList.remove('active');
+    }, 1000); // Animation duration is 1 second
+
+    // Schedule the next appearance at a random interval
+    const minDelay = 0.25 * 60 * 1000; // 15 seconds in milliseconds
+    const maxDelay = 0.5 * 60 * 1000; // 30 seconds in milliseconds
+    const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+    
+    setTimeout(showSpiralAnimation, randomDelay);
+}
+
+// Function to show a robot animation
+function showRobotAnimation() {
+    const robot = document.getElementById('robot-animation');
+    
+    // Get a random position on the screen
+    const randomX = Math.random() * (window.innerWidth - 300);
+    const randomY = Math.random() * (window.innerHeight - 300);
+
+    // Position the robot and make it visible
+    robot.style.left = `${randomX}px`;
+    robot.style.top = `${randomY}px`;
+    robot.classList.add('active');
+    
+    // Set a timer to make the robot disappear
+    setTimeout(() => {
+        robot.classList.remove('active');
+    }, 500); // Animation duration is 0.5 seconds
+
+    // Schedule the next appearance at a random interval between 10 and 20 minutes
+    const minDelay = 10 * 60 * 1000;
+    const maxDelay = 20 * 60 * 1000;
+    const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+    
+    setTimeout(showRobotAnimation, randomDelay);
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize main website functionality
@@ -456,6 +538,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add loading animation completion
     document.body.classList.add('loaded');
+
+    // Start the binary glitch animation after 5 second delay
+    setTimeout(showDigitalGlitch, 5000);
+
+    // Start the robot animation after 10 second delay
+    setTimeout(showRobotAnimation, 10000);
+
+    // Start the spiral animation
+    showSpiralAnimation();
 });
 
 // Handle window resize for responsive behavior

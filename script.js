@@ -250,12 +250,12 @@ class ResumeManager {
 
         downloadButtons.forEach(button => {
             button.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default button action
+                
                 const action = button.dataset.action;
                 const file = button.dataset.file;
                 
                 if (action === 'download') {
-                    e.preventDefault(); // Prevent default button action
-                    
                     // Show the animation
                     downloadAnimation.classList.add('active');
                     
@@ -366,6 +366,28 @@ class PublicationManager {
     }
 }
 
+// Typewriter class modified to type a single title once
+class Typewriter {
+    constructor(element, text, speed = 150) {
+        this.element = element;
+        this.text = text;
+        this.speed = speed;
+        this.charIndex = 0;
+        this.type();
+    }
+
+    type() {
+        if (this.charIndex < this.text.length) {
+            this.element.textContent += this.text.charAt(this.charIndex);
+            this.charIndex++;
+            setTimeout(() => this.type(), this.speed);
+        } else {
+            // Remove the blinking cursor after typing is complete
+            this.element.style.borderRight = 'none';
+        }
+    }
+}
+
 // Page State Management
 class StateManager {
     constructor() {
@@ -410,6 +432,14 @@ document.addEventListener('DOMContentLoaded', () => {
     new CertificateManager();
     new PublicationManager();
     new StateManager();
+
+    // Typewriter effect for the main title
+    const typewriterElement = document.getElementById('typewriter-text');
+    if (typewriterElement) {
+        setTimeout(() => {
+            new Typewriter(typewriterElement, " & Cybersecurity Analyst ");
+        }, 100);
+    }
 
     // Add smooth scrolling behavior to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -173,12 +173,27 @@ class ContactManager {
     // Sets up event listeners for contact links
     setupContactActions() {
         const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+        const emailAnimation = document.getElementById('email-animation'); // Get the animation element
+
         emailLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                console.log('Email link clicked:', link.href);
+                e.preventDefault(); // Prevent the default mailto link behavior
+                
+                // Show the animation
+                emailAnimation.classList.add('active');
+
+                // Wait for the animation to play
+                setTimeout(() => {
+                    // Hide the animation
+                    emailAnimation.classList.remove('active');
+                    
+                    // Trigger the mailto link programmatically
+                    window.location.href = e.target.closest('a').href;
+                }, 2000); // Wait for 2 seconds
             });
         });
-
+        
+        // The rest of the ContactManager class remains the same
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         phoneLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -200,9 +215,9 @@ class PortfolioManager {
 
         projectButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                e.preventDefault();
+                // The `onclick` attribute on the button handles the link, so this part is only for placeholders
                 const buttonText = button.textContent.trim();
-
+                
                 if (buttonText === 'View Code') {
                     this.handleViewCode(button);
                 } else if (buttonText === 'Live Demo') {
@@ -231,14 +246,25 @@ class ResumeManager {
 
     setupDownloadActions() {
         const downloadButtons = document.querySelectorAll('.resume-actions .btn');
-        
+        const downloadAnimation = document.getElementById('download-animation'); // Get the new animation element
+
         downloadButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 const action = button.dataset.action;
                 const file = button.dataset.file;
                 
                 if (action === 'download') {
-                    this.handleDownload(file);
+                    e.preventDefault(); // Prevent default button action
+                    
+                    // Show the animation
+                    downloadAnimation.classList.add('active');
+                    
+                    // Wait for the animation to play before triggering the download
+                    setTimeout(() => {
+                        this.handleDownload(file);
+                        // Hide the animation after the download is initiated
+                        downloadAnimation.classList.remove('active');
+                    }, 2000); // Animation duration is 2 seconds
                 } else if (action === 'preview') {
                     this.handlePreview(file);
                 }

@@ -38,6 +38,14 @@
 </head>
 
 <body>
+    <!-- Pop-up Modal -->
+    <div id="catch-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>Wow, you're fast! Are you a ninja or just really good at clicking things?</p>
+        </div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -89,7 +97,7 @@
                                 </div>
                                 <div class="info-item">
                                     <span class="icon">📞</span>
-                                    <span>+46 76 281 8440</span>
+                                    <a href="tel:+46762818440">+46 76 281 8440</a>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +126,7 @@
                             </p>
 
                             <p class="text-large">
-                                During my recent role as a Programming & SEO Analyst at Bonn Bonn AB,
+                                During my recent role as a Programmer & SEO Analyst at Bonn Bonn AB,
                                 I established comprehensive website architectures and integrated different payment
                                 systems
                                 while optimizing email marketing campaigns. My experience as a Teaching Assistant at
@@ -164,8 +172,8 @@
                                     <span class="badge badge-outline">Freelance/Contract</span>
                                 </div>
                                 <span class="date">
-                                    <span class="date">June 2025 -</span>
-                                    <span class="date">Aug 2025</span>
+                                    <span class="date-part">June 2025 -</span>
+                                    <span class="date-part">Aug 2025</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -186,8 +194,8 @@
                                     <span class="badge badge-outline">Startup (Closed)</span>
                                 </div>
                                 <span class="date">
-                                    <span class="date">Mars 2023 -</span>
-                                    <span class="date">June 2024</span>
+                                    <span class="date-part">Mars 2023 -</span>
+                                    <span class="date-part">June 2024</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -207,8 +215,8 @@
                                     <span class="badge badge-outline">Startup (Closed)</span>
                                 </div>
                                 <span class="date">
-                                    <span class="date">Apr 2023 -</span>
-                                    <span class="date">Aug 2023</span>
+                                    <span class="date-part">Apr 2023 -</span>
+                                    <span class="date-part">Aug 2023</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -227,8 +235,8 @@
                                     <p class="company">Uppsala University</p>
                                 </div>
                                 <span class="date">
-                                    <span class="date">2023 -</span>
-                                    <span class="date">2025</span>
+                                    <span class="date-part">2023 -</span>
+                                    <span class="date-part">2025</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -249,8 +257,8 @@
                                     <p class="company">Uppsala University</p>
                                 </div>
                                 <span class="date">
-                                    <span class="date">Aug 2022 -</span>
-                                    <span class="date">Dec 2022</span>
+                                    <span class="date-part">Aug 2022 -</span>
+                                    <span class="date-part">Dec 2022</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -269,8 +277,8 @@
                                     <p class="company">Uppsala University</p>
                                 </div>
                                 <span class="date">
-                                    <span class="date">Jan 2022 -</span>
-                                    <span class="date">June 2022</span>
+                                    <span class="date-part">Jan 2022 -</span>
+                                    <span class="date-part">June 2022</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -289,8 +297,8 @@
                                     <span class="badge badge-outline">Startup (Closed)</span>
                                 </div>
                                 <span class="date">
-                                    <span class="date">June 2018 -</span>
-                                    <span class="date">Sep 2028</span>
+                                    <span class="date-part">June 2018 -</span>
+                                    <span class="date-part">Sep 2028</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -314,8 +322,8 @@
                             <div class="card-header">
                                 <h3>Master of Science (M.Sc.) in Electrical Engineering</h3>
                                 <span class="date">
-                                    <span class="date">2023-</span>
-                                    <span class="date">2025</span>
+                                    <span class="date-part">2023-</span>
+                                    <span class="date-part">2025</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -329,8 +337,8 @@
                             <div class="card-header">
                                 <h3>Bachelor of Science (B.Sc.) in Electrical Engineering</h3>
                                 <span class="date">
-                                    <span class="date">2019-</span>
-                                    <span class="date">2022</span>
+                                    <span class="date-part">2019-</span>
+                                    <span class="date-part">2022</span>
                                 </span>
                             </div>
                             <div class="card-content">
@@ -911,7 +919,7 @@
                                     <h4>Abstract</h4>
                                     <p>This thesis presents a novel approach to energy optimization in commercial
                                         buildings using real-time control systems and machine learning algorithms. Our
-                                        method achieved a 35% reduction in energy consumption while maintaining optimal
+                                        method achieved a 35% reduction in electricity consumption while maintaining optimal
                                         comfort levels.</p>
                                 </div>
 
@@ -1078,7 +1086,7 @@
                             </div>
                             <div class="resume-content">
                                 <div class="resume-details">
-                                    <div class="detail-item">
+                                    <div class="detail-section">
                                         <h4>Language</h4>
                                         <p>English</p>
                                     </div>
@@ -1116,7 +1124,7 @@
                             </div>
                             <div class="resume-content">
                                 <div class="resume-details">
-                                    <div class="detail-item">
+                                    <div class="detail-section">
                                         <h4>Language</h4>
                                         <p>Swedish</p>
                                     </div>
@@ -1164,6 +1172,10 @@
 
     <!-- Spiral animation -->
     <dotlottie-wc id="spiral-animation" src="https://lottie.host/4c2755ab-f755-43ff-9ee2-15f48b544c57/l5K72nND8v.lottie" style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+
+    <!-- AI Sound Wave Animation -->
+    <dotlottie-wc id="ai-sound-animation" src="https://lottie.host/aa0fbb7e-9fa8-4302-a6cc-ace3eb16a4f3/FHyS0RJbOo.lottie" style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+    <audio id="click-sound" src="wow.mp3" preload="auto"></audio>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

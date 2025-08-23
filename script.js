@@ -542,14 +542,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading animation completion
     document.body.classList.add('loaded');
 
-    // Start the binary glitch animation after 5 second delay
-    setTimeout(showDigitalGlitch, 5000);
+    // Start the binary glitch animation after 20 second delay
+    setTimeout(showDigitalGlitch, 20000);
 
-    // Start the robot animation after 10 second delay
-    setTimeout(showRobotAnimation, 10000);
+    // Start the robot animation after 30 second delay
+    setTimeout(showRobotAnimation, 30000);
 
-    // Start the spiral animation
-    showSpiralAnimation();
+    // Start the spiral animation after 10 second delay
+    setTimeout(showSpiralAnimation, 10000);
 });
 
 // Handle window resize for responsive behavior

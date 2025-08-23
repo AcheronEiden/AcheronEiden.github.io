@@ -1,4 +1,4 @@
-# Alhassan Jawad - Professional Resume Website
+# Professional Resume Website
 
 This document is a comprehensive guide to help you manage your personal resume website. It details the file structure, how to customize each section, and explains the core functionality of the code. Think of this as a reference manual you can come back to whenever you want to update your portfolio.
 

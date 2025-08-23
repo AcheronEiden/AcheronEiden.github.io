@@ -108,6 +108,7 @@ The JavaScript file is organized into several classes, each handling a specific 
   * `showSpiralAnimation`: Causes a spiral animation to appear and disappear at a random location on the page.
   * `showRobotAnimation`: Triggers a robot animation to appear at random times and locations on the page.
   * `showAISoundAnimation`: Displays an AI sound wave animation at random intervals
+  * `triggerPageGlitch`: Initiates a full-page glitch effect at random intervals.
 
 **Important**: To make the website fully functional, you must update the placeholder alert messages in classes like `PortfolioManager`, `ResumeManager`, and `CertificateManager` with your actual links or custom functionality.
 

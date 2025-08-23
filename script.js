@@ -515,11 +515,14 @@ document.addEventListener('DOMContentLoaded', () => {
     new PublicationManager();
     new StateManager();
 
-    // Typewriter effect for the main title
     const typewriterElement = document.getElementById('typewriter-text');
     if (typewriterElement) {
+        // Read the initial text from the HTML element
+        const textToType = typewriterElement.textContent;
+        typewriterElement.textContent = ''; // Clear the initial text
+        
         setTimeout(() => {
-            new Typewriter(typewriterElement, " & Cybersecurity Analyst ");
+            new Typewriter(typewriterElement, textToType.trim());
         }, 100);
     }
 

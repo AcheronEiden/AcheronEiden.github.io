@@ -1112,10 +1112,11 @@ p {
     z-index: 2000;
     opacity: 0; /* Initially hidden */
     pointer-events: none; /* Prevents interaction when hidden */
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 1s ease-in-out;
 }
 
-#email-animation.active, #download-animation.active, #robot-animation.active, #spiral-animation.active {
+#email-animation.active, #download-animation.active,
+#robot-animation.active, #spiral-animation.active {
     opacity: 1; /* Fade in when active */
     pointer-events: auto; /* Allow interaction when active */
 }

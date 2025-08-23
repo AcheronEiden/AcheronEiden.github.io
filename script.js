@@ -352,7 +352,7 @@ class PublicationManager {
 
     // Placeholder function for viewing a publication PDF
     handlePDFView(button) {
-        alert('PDF view would open here. Please add your actual publication PDF links.');
+        // alert('PDF view would open here. Please add your actual publication PDF links.');
     }
 
     // Placeholder function for opening a publisher link

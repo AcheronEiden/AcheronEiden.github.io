@@ -1240,4 +1240,9 @@ p {
     .category-title {
         font-size: var(--font-size-xl);
     }
+
+  .experience-card .date-part:nth-child(2) {
+    display: block;
+    margin-left: 0;
+  }
 }

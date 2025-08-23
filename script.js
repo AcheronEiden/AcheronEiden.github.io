@@ -456,6 +456,28 @@ function showRobotAnimation() {
     }, 10000);
 }
 
+// Function to trigger a full-page glitch effect
+function triggerPageGlitch() {
+    const body = document.body;
+    body.classList.add('page-glitch');
+
+    // Remove the class after the animation completes
+    setTimeout(() => {
+        body.classList.remove('page-glitch');
+        
+        // --- CHANGE THESE LINES ---
+        const minDelay = 3 * 60 * 1000; // 3 minutes
+        const maxDelay = 7 * 60 * 1000; // 7 minutes
+        const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+        
+        // Schedule the next glitch
+        setTimeout(triggerPageGlitch, randomDelay);
+    }, 400); // Must match the animation duration (0.4s)
+}
+
+// And update the initial call to use a random delay too
+setTimeout(triggerPageGlitch, Math.random() * (7 * 60 * 1000 - 3 * 60 * 1000) + 3 * 60 * 1000);
+
 let isAISoundAnimationClickable = false;
 
 function showAISoundAnimation() {
@@ -524,6 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(showDigitalGlitch, 5000); // Adds a delay of 5 seconds
     setTimeout(showSpiralAnimation, 15000); // Adds a delay of 15 seconds
     setTimeout(showRobotAnimation, 20000); // Adds a delay of 20 seconds
+    setTimeout(triggerPageGlitch, 0.4 * 60 * 1000); // Adds a delay of 10 seconds
 
     const aiSound = document.getElementById('ai-sound-animation');
     const modal = document.getElementById('catch-modal');

@@ -82,9 +82,14 @@ class ResumeWebsite {
             targetPage.classList.add('active');
             this.currentPage = pageId;
 
-            history.pushState({ page: pageId }, '', `#${pageId}`);
+            history.pushState({
+                page: pageId
+            }, '', `#${pageId}`);
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
 
             setTimeout(() => {
                 this.setupAnimations();
@@ -123,7 +128,7 @@ class ResumeWebsite {
     // Utility function for throttling to limit function calls on scroll
     throttle(func, limit) {
         let inThrottle;
-        return function () {
+        return function() {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
@@ -158,7 +163,9 @@ class SkillsAnimation {
                     }
                 }
             });
-        }, { threshold: 0.5 });
+        }, {
+            threshold: 0.5
+        });
 
         skillCards.forEach(card => observer.observe(card));
     }
@@ -178,7 +185,7 @@ class ContactManager {
         emailLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault(); // Prevent the default mailto link behavior
-                
+
                 // Show the animation
                 emailAnimation.classList.add('active');
 
@@ -186,14 +193,13 @@ class ContactManager {
                 setTimeout(() => {
                     // Hide the animation
                     emailAnimation.classList.remove('active');
-                    
+
                     // Trigger the mailto link programmatically
                     window.location.href = e.target.closest('a').href;
                 }, 2000); // Wait for 2 seconds
             });
         });
-        
-        // The rest of the ContactManager class remains the same
+
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         phoneLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -215,9 +221,8 @@ class PortfolioManager {
 
         projectButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                // The `onclick` attribute on the button handles the link, so this part is only for placeholders
                 const buttonText = button.textContent.trim();
-                
+
                 if (buttonText === 'View Code') {
                     this.handleViewCode(button);
                 } else if (buttonText === 'Live Demo') {
@@ -227,12 +232,10 @@ class PortfolioManager {
         });
     }
 
-    // Placeholder function for viewing project code
     handleViewCode(button) {
         alert('GitHub repository link would be opened here. Please add your actual repository URLs.');
     }
 
-    // Placeholder function for viewing a live demo
     handleLiveDemo(button) {
         alert('Live demo would be opened here. Please add your actual demo URLs.');
     }
@@ -246,25 +249,21 @@ class ResumeManager {
 
     setupDownloadActions() {
         const downloadButtons = document.querySelectorAll('.resume-actions .btn');
-        const downloadAnimation = document.getElementById('download-animation'); // Get the new animation element
+        const downloadAnimation = document.getElementById('download-animation');
 
         downloadButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent default button action
-                
+                e.preventDefault();
+
                 const action = button.dataset.action;
                 const file = button.dataset.file;
-                
+
                 if (action === 'download') {
-                    // Show the animation
                     downloadAnimation.classList.add('active');
-                    
-                    // Wait for the animation to play before triggering the download
                     setTimeout(() => {
                         this.handleDownload(file);
-                        // Hide the animation after the download is initiated
                         downloadAnimation.classList.remove('active');
-                    }, 2000); // Animation duration is 2 seconds
+                    }, 2000);
                 } else if (action === 'preview') {
                     this.handlePreview(file);
                 }
@@ -272,7 +271,6 @@ class ResumeManager {
         });
     }
 
-    // Handles the download of the specified file
     handleDownload(file) {
         if (file) {
             const link = document.createElement('a');
@@ -281,19 +279,12 @@ class ResumeManager {
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            console.log('Download initiated for:', file);
-        } else {
-            console.error('No file specified for download.');
         }
     }
 
-    // Handles the preview of the specified file in a new tab
     handlePreview(file) {
         if (file) {
             window.open(file, '_blank', 'noopener');
-            console.log('Preview opened for:', file);
-        } else {
-            console.error('No file specified for preview.');
         }
     }
 }
@@ -304,10 +295,8 @@ class CertificateManager {
         this.setupVerificationActions();
     }
 
-    // Sets up event listeners for certificate verification buttons
     setupVerificationActions() {
         const verifyButtons = document.querySelectorAll('.certificate-card .btn');
-
         verifyButtons.forEach(button => {
             if (button.textContent.includes('Verify')) {
                 button.addEventListener('click', (e) => {
@@ -318,7 +307,6 @@ class CertificateManager {
         });
     }
 
-    // Placeholder function for certificate verification
     handleVerification(button) {
         alert('Certificate verification would open here. Please add your actual verification URLs.');
     }
@@ -330,39 +318,13 @@ class PublicationManager {
         this.setupPublicationActions();
     }
 
-    // Sets up event listeners for publication buttons
     setupPublicationActions() {
         const pubButtons = document.querySelectorAll('.publication-actions .btn');
-
         pubButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                const buttonText = button.textContent.trim();
-
-                if (buttonText === 'View PDF') {
-                    this.handlePDFView(button);
-                } else if (buttonText === 'Publisher Link') {
-                    this.handlePublisherLink(button);
-                } else if (buttonText.includes('Citations')) {
-                    this.handleCitations(button);
-                }
             });
         });
-    }
-
-    // Placeholder function for viewing a publication PDF
-    handlePDFView(button) {
-        // alert('PDF view would open here. Please add your actual publication PDF links.');
-    }
-
-    // Placeholder function for opening a publisher link
-    handlePublisherLink(button) {
-        alert('Publisher link would open here. Please add your actual publisher URLs.');
-    }
-
-    // Placeholder function for showing citations
-    handleCitations(button) {
-        alert('Citations would be shown here. Please add your actual citation links.');
     }
 }
 
@@ -382,7 +344,6 @@ class Typewriter {
             this.charIndex++;
             setTimeout(() => this.type(), this.speed);
         } else {
-            // Remove the blinking cursor after typing is complete
             this.element.style.borderRight = 'none';
         }
     }
@@ -394,7 +355,6 @@ class StateManager {
         this.handleBrowserNavigation();
     }
 
-    // Handles browser back/forward button clicks and initial page load
     handleBrowserNavigation() {
         window.addEventListener('popstate', (e) => {
             if (e.state && e.state.page) {
@@ -419,94 +379,117 @@ class StateManager {
     }
 }
 
-// Function to show a binary glitch at a random time and place
 function showDigitalGlitch() {
     const glitch = document.getElementById('binary-glitch');
-    
-    // Generate a random binary string
-    const binaryString = Array.from({ length: 20 }, () => Math.round(Math.random())).join('');
-
-    // Get a random position on the screen
+    const binaryString = Array.from({
+        length: 20
+    }, () => Math.round(Math.random())).join('');
     const randomX = Math.random() * (window.innerWidth - 150);
     const randomY = Math.random() * (window.innerHeight - 150);
-
-    // Position the glitch, set its content, and make it visible
     glitch.style.left = `${randomX}px`;
     glitch.style.top = `${randomY}px`;
     glitch.textContent = binaryString;
     glitch.style.display = 'block';
-    
-    // Set a timer to make the glitch disappear and reset
     setTimeout(() => {
         glitch.style.display = 'none';
-        
-        // Schedule the next appearance at a random interval
-        const minDelay = 0.25 * 60 * 1000; // 15 seconds in milliseconds
-        const maxDelay = 0.5 * 60 * 1000; // 30 seconds in milliseconds
+        const minDelay = 20 * 1000; // 20 seconds
+        const maxDelay = 45 * 1000; // 45 seconds
         const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
-        
         setTimeout(showDigitalGlitch, randomDelay);
-    }, 1000); // Glitch duration is 1 second
+    }, 1000); // Display for 1 second
 }
 
-// Function to show a spiral animation
 function showSpiralAnimation() {
     const spiral = document.getElementById('spiral-animation');
-    
-    // Get a random position on the screen
     const randomX = Math.random() * (window.innerWidth - 300);
     const randomY = Math.random() * (window.innerHeight - 300);
-
-    // Position the animation and make it visible
     spiral.style.left = `${randomX}px`;
     spiral.style.top = `${randomY}px`;
     spiral.classList.add('active');
-    
-    // Set a timer to make the animation disappear
     setTimeout(() => {
         spiral.classList.remove('active');
-    }, 1000); // Animation duration is 1 second
-
-    // Schedule the next appearance at a random interval
-    const minDelay = 0.25 * 60 * 1000; // 15 seconds in milliseconds
-    const maxDelay = 0.5 * 60 * 1000; // 30 seconds in milliseconds
+    }, 1000); // The animation is only 1 second long
+    const minDelay = 30 * 1000; // 30 seconds
+    const maxDelay = 60 * 1000; // 60 seconds
     const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
-    
     setTimeout(showSpiralAnimation, randomDelay);
 }
 
-// Function to show a robot animation
 function showRobotAnimation() {
     const robot = document.getElementById('robot-animation');
-    
-    // Get a random position on the screen
-    const randomX = Math.random() * (window.innerWidth - 300);
-    const randomY = Math.random() * (window.innerHeight - 300);
-
-    // Position the robot and make it visible
-    robot.style.left = `${randomX}px`;
-    robot.style.top = `${randomY}px`;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const animWidth = 300;
+    const animHeight = 300;
+    let startX, startY;
+    switch (Math.floor(Math.random() * 4)) {
+        case 0:
+            startX = Math.random() * viewportWidth - animWidth / 2;
+            startY = -animHeight;
+            break;
+        case 1:
+            startX = viewportWidth;
+            startY = Math.random() * viewportHeight - animHeight / 2;
+            break;
+        case 2:
+            startX = Math.random() * viewportWidth - animWidth / 2;
+            startY = viewportHeight;
+            break;
+        case 3:
+            startX = -animWidth;
+            startY = Math.random() * viewportHeight - animHeight / 2;
+            break;
+    }
+    const endX = Math.random() * (viewportWidth - animWidth);
+    const endY = Math.random() * (viewportHeight - animHeight);
+    robot.style.transform = `translate(${startX}px, ${startY}px)`;
     robot.classList.add('active');
-    
-    // Set a timer to make the robot disappear
+    setTimeout(() => {
+        robot.style.transform = `translate(${endX}px, ${endY}px)`;
+    }, 10000); // Display for 10 seconds
     setTimeout(() => {
         robot.classList.remove('active');
-    }, 500); // Animation duration is 0.5 seconds
-
-    // Schedule the next appearance at a random interval between 10 and 20 minutes
-    const minDelay = 10 * 60 * 1000;
-    const maxDelay = 20 * 60 * 1000;
-    const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
-    
-    setTimeout(showRobotAnimation, randomDelay);
+        const minDelay = 5 * 60 * 1000;  // 5 minutes
+        const maxDelay = 15 * 60 * 1000; // 15 minutes
+        const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+        setTimeout(showRobotAnimation, randomDelay);
+    }, 10000);
 }
 
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize main website functionality
-    window.resumeWebsite = new ResumeWebsite();
+let isAISoundAnimationClickable = false;
 
-    // Initialize specialized managers
+function showAISoundAnimation() {
+    const aiSound = document.getElementById('ai-sound-animation');
+    const randomX = Math.random() * (window.innerWidth - 300);
+    const randomY = Math.random() * (window.innerHeight - 300);
+    aiSound.style.left = `${randomX}px`;
+    aiSound.style.top = `${randomY}px`;
+    aiSound.classList.add('active');
+    isAISoundAnimationClickable = true;
+    setTimeout(() => {
+        aiSound.classList.remove('active');
+        isAISoundAnimationClickable = false;
+    }, 400); // The animation is only 0.4 seconds long
+    const minDelay = 1.5 * 60 * 1000; // 1.5 minutes
+    const maxDelay = 4 * 60 * 1000;   // 4 minutes
+    const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+    setTimeout(showAISoundAnimation, randomDelay);
+}
+
+// Create an AudioContext (it's best to create it once)
+let audioCtx;
+
+// Function to play the custom sound file
+function playClickSound() {
+    const sound = document.getElementById('click-sound');
+    if (sound) {
+        sound.currentTime = 0; // Rewind to the start
+        sound.play();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.resumeWebsite = new ResumeWebsite();
     new SkillsAnimation();
     new ContactManager();
     new PortfolioManager();
@@ -517,18 +500,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typewriterElement = document.getElementById('typewriter-text');
     if (typewriterElement) {
-        // Read the initial text from the HTML element
         const textToType = typewriterElement.textContent;
-        typewriterElement.textContent = ''; // Clear the initial text
-        
+        typewriterElement.textContent = '';
         setTimeout(() => {
             new Typewriter(typewriterElement, textToType.trim());
         }, 100);
     }
 
-    // Add smooth scrolling behavior to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -539,22 +519,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add loading animation completion
     document.body.classList.add('loaded');
+    setTimeout(showAISoundAnimation, 10000); // Adds a delay of 10 seconds
+    setTimeout(showDigitalGlitch, 5000); // Adds a delay of 5 seconds
+    setTimeout(showSpiralAnimation, 15000); // Adds a delay of 15 seconds
+    setTimeout(showRobotAnimation, 20000); // Adds a delay of 20 seconds
 
-    // Start the binary glitch animation after 20 second delay
-    setTimeout(showDigitalGlitch, 20000);
+    const aiSound = document.getElementById('ai-sound-animation');
+    const modal = document.getElementById('catch-modal');
+    const closeBtn = document.querySelector('#catch-modal .close-btn');
 
-    // Start the robot animation after 30 second delay
-    setTimeout(showRobotAnimation, 30000);
+    if (aiSound) {
+        aiSound.addEventListener('click', (e) => {
+            if (isAISoundAnimationClickable) {
+                e.preventDefault();
+                playClickSound();
+                aiSound.classList.remove('active'); // Hide the animation
+                isAISoundAnimationClickable = false;
+                modal.style.display = 'block'; // Show the modal
+            }
+        });
+    }
 
-    // Start the spiral animation after 10 second delay
-    setTimeout(showSpiralAnimation, 10000);
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 });
 
-// Handle window resize for responsive behavior
 window.addEventListener('resize', () => {
-    // Close mobile menu on resize to larger screen
     if (window.innerWidth > 768) {
         const navMenu = document.getElementById('nav-menu');
         const hamburger = document.getElementById('nav-hamburger');
@@ -565,7 +565,6 @@ window.addEventListener('resize', () => {
     }
 });
 
-// Performance optimization: Lazy load images
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -580,5 +579,7 @@ if ('IntersectionObserver' in window) {
 
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
     });
 }

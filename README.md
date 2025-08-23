@@ -107,6 +107,7 @@ The JavaScript file is organized into several classes, each handling a specific 
   * `showDigitalGlitch`: Displays a brief, randomized binary code glitch at a random screen position.
   * `showSpiralAnimation`: Causes a spiral animation to appear and disappear at a random location on the page.
   * `showRobotAnimation`: Triggers a robot animation to appear at random times and locations on the page.
+  * `showAISoundAnimation`: Displays an AI sound wave animation at random intervals
 
 **Important**: To make the website fully functional, you must update the placeholder alert messages in classes like `PortfolioManager`, `ResumeManager`, and `CertificateManager` with your actual links or custom functionality.
 

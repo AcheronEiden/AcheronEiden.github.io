@@ -2,12 +2,11 @@
 
 /* CSS Variables */
 :root {
-    /* Professional Blue Theme */
-    --color-primary: hsl(215, 84%, 20%);
-    --color-primary-light: hsl(215, 84%, 32%);
-    --color-primary-dark: hsl(215, 84%, 16%);
-    --color-secondary: hsl(215, 30%, 95%);
-    --color-accent: hsl(215, 84%, 20%);
+    /* Charcoal Theme based on CV color */
+    --color-primary: #323B4C;
+    --color-primary-light: #4A5568;
+    --color-primary-dark: #2A3140;
+    --color-secondary: #E2E8F0;
     
     /* Text Colors */
     --color-text-primary: hsl(215, 28%, 17%);

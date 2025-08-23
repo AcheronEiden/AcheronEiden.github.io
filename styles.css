@@ -305,6 +305,13 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Ensure mobile browser default link colors are overridden */
+.hero-info .info-item a,
+.contact-card .contact-icon a {
+    color: var(--color-text-light); /* This will be your desired white/light color */
+    text-decoration: none; /* Removes the underline from the links */
+}
+
 .icon {
     font-size: var(--font-size-lg);
 }

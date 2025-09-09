@@ -1149,6 +1149,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 /* END: FIX */
 
 
@@ -1269,17 +1270,55 @@ p {
 }
 
 @keyframes glitch-animation {
-    0% { transform: translate(0); filter: none; }
-    10% { transform: translate(-3px, -3px); filter: hue-rotate(30deg); }
-    20% { transform: translate(3px, 3px); }
-    30% { transform: translate(-3px, 3px); filter: saturate(150%); }
-    40% { transform: translate(3px, -3px); }
-    50% { transform: translate(-3px, -3px) scale(1.01); }
-    60% { transform: translate(3px, 3px); }
-    70% { transform: translate(-3px, 3px); filter: brightness(110%); }
-    80% { transform: translate(3px, -3px); }
-    90% { transform: translate(-3px, -3px); filter: hue-rotate(60deg); }
-    100% { transform: translate(0); filter: none; }
+    0% {
+        transform: translate(0);
+        filter: none;
+    }
+
+    10% {
+        transform: translate(-3px, -3px);
+        filter: hue-rotate(30deg);
+    }
+
+    20% {
+        transform: translate(3px, 3px);
+    }
+
+    30% {
+        transform: translate(-3px, 3px);
+        filter: saturate(150%);
+    }
+
+    40% {
+        transform: translate(3px, -3px);
+    }
+
+    50% {
+        transform: translate(-3px, -3px) scale(1.01);
+    }
+
+    60% {
+        transform: translate(3px, 3px);
+    }
+
+    70% {
+        transform: translate(-3px, 3px);
+        filter: brightness(110%);
+    }
+
+    80% {
+        transform: translate(3px, -3px);
+    }
+
+    90% {
+        transform: translate(-3px, -3px);
+        filter: hue-rotate(60deg);
+    }
+
+    100% {
+        transform: translate(0);
+        filter: none;
+    }
 }
 
 /* Responsive Design */
@@ -1396,4 +1435,12 @@ p {
         display: block;
         margin-left: 0;
     }
+}
+
+/* FIX for Bullet Points Alignment */
+.job-duties li,
+.project-content li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xs);
 }

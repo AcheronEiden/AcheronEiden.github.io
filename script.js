@@ -128,7 +128,7 @@ class ResumeWebsite {
     // Utility function for throttling to limit function calls on scroll
     throttle(func, limit) {
         let inThrottle;
-        return function() {
+        return function () {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
@@ -168,6 +168,49 @@ class SkillsAnimation {
         });
 
         skillCards.forEach(card => observer.observe(card));
+    }
+}
+
+// Contact Form Submission Handler
+class ContactFormManager {
+    constructor() {
+        this.form = document.getElementById('contact-form');
+        this.status = document.getElementById('form-status');
+        this.setupListener();
+    }
+
+    setupListener() {
+        if (this.form) {
+            this.form.addEventListener("submit", this.handleSubmit.bind(this));
+        }
+    }
+
+    async handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        try {
+            const response = await fetch(event.target.action, {
+                method: this.form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                this.status.innerHTML = "Thanks for your submission!";
+                this.form.reset();
+            } else {
+                const responseData = await response.json();
+                if (Object.hasOwn(responseData, 'errors')) {
+                    this.status.innerHTML = responseData["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    this.status.innerHTML = "Oops! There was a problem submitting your form";
+                }
+            }
+        } catch (error) {
+            this.status.innerHTML = "Oops! There was a problem submitting your form";
+        }
     }
 }
 
@@ -392,8 +435,8 @@ function showDigitalGlitch() {
     glitch.style.display = 'block';
     setTimeout(() => {
         glitch.style.display = 'none';
-        const minDelay = 20 * 1000; // 20 seconds
-        const maxDelay = 45 * 1000; // 45 seconds
+        const minDelay = 90 * 1000;     // 1.5 minutes
+        const maxDelay = 3 * 60 * 1000; // 3 minutes
         const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
         setTimeout(showDigitalGlitch, randomDelay);
     }, 1000); // Display for 1 second
@@ -409,8 +452,8 @@ function showSpiralAnimation() {
     setTimeout(() => {
         spiral.classList.remove('active');
     }, 1000); // The animation is only 1 second long
-    const minDelay = 30 * 1000; // 30 seconds
-    const maxDelay = 60 * 1000; // 60 seconds
+    const minDelay = 2 * 60 * 1000; // 2 minutes
+    const maxDelay = 4 * 60 * 1000; // 4 minutes
     const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
     setTimeout(showSpiralAnimation, randomDelay);
 }
@@ -450,7 +493,7 @@ function showRobotAnimation() {
     setTimeout(() => {
         robot.classList.remove('active');
         const minDelay = 5 * 60 * 1000;  // 5 minutes
-        const maxDelay = 15 * 60 * 1000; // 15 minutes
+        const maxDelay = 10 * 60 * 1000; // 10 minutes
         const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
         setTimeout(showRobotAnimation, randomDelay);
     }, 10000);
@@ -464,12 +507,11 @@ function triggerPageGlitch() {
     // Remove the class after the animation completes
     setTimeout(() => {
         body.classList.remove('page-glitch');
-        
-        // --- CHANGE THESE LINES ---
+
         const minDelay = 3 * 60 * 1000; // 3 minutes
         const maxDelay = 7 * 60 * 1000; // 7 minutes
         const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
-        
+
         // Schedule the next glitch
         setTimeout(triggerPageGlitch, randomDelay);
     }, 400); // Must match the animation duration (0.4s)
@@ -492,8 +534,8 @@ function showAISoundAnimation() {
         aiSound.classList.remove('active');
         isAISoundAnimationClickable = false;
     }, 400); // The animation is only 0.4 seconds long
-    const minDelay = 1.5 * 60 * 1000; // 1.5 minutes
-    const maxDelay = 4 * 60 * 1000;   // 4 minutes
+    const minDelay = 2.5 * 60 * 1000; // 2.5 minutes
+    const maxDelay = 5 * 60 * 1000;   // 5 minutes
     const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
     setTimeout(showAISoundAnimation, randomDelay);
 }
@@ -514,6 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.resumeWebsite = new ResumeWebsite();
     new SkillsAnimation();
     new ContactManager();
+    new ContactFormManager();
     new PortfolioManager();
     new ResumeManager();
     new CertificateManager();
@@ -530,7 +573,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -542,11 +585,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.body.classList.add('loaded');
-    setTimeout(showAISoundAnimation, 10000); // Adds a delay of 10 seconds
-    setTimeout(showDigitalGlitch, 5000); // Adds a delay of 5 seconds
-    setTimeout(showSpiralAnimation, 15000); // Adds a delay of 15 seconds
-    setTimeout(showRobotAnimation, 20000); // Adds a delay of 20 seconds
-    setTimeout(triggerPageGlitch, 0.4 * 60 * 1000); // Adds a delay of 10 seconds
+    setTimeout(showAISoundAnimation, Math.random() * (90 * 1000) + 30000); // Between 30-120 seconds
+    setTimeout(showDigitalGlitch, Math.random() * (60 * 1000) + 20000);    // Between 20-80 seconds
+    setTimeout(showSpiralAnimation, Math.random() * (120 * 1000) + 45000); // Between 45-165 seconds
+    setTimeout(showRobotAnimation, Math.random() * (180 * 1000) + 90000);  // Between 90-270 seconds
+    setTimeout(triggerPageGlitch, Math.random() * (150 * 1000) + 60000);   // Between 60-210 seconds
 
     const aiSound = document.getElementById('ai-sound-animation');
     const modal = document.getElementById('catch-modal');

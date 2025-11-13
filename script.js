@@ -188,6 +188,17 @@ class ContactFormManager {
     async handleSubmit(event) {
         event.preventDefault();
         const data = new FormData(event.target);
+        const emailAnimation = document.getElementById('email-animation'); // Get the animation
+
+        // 1. Show the animation
+        if (emailAnimation) {
+            emailAnimation.classList.add('active');
+        }
+
+        // 2. Wait for 2 seconds (2000ms) for the animation to play
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        // 3. Run the form submission logic
         try {
             const response = await fetch(event.target.action, {
                 method: this.form.method,
@@ -210,6 +221,11 @@ class ContactFormManager {
             }
         } catch (error) {
             this.status.innerHTML = "Oops! There was a problem submitting your form";
+        } finally {
+            // 4. Hide the animation after the form is submitted (success or error)
+            if (emailAnimation) {
+                emailAnimation.classList.remove('active');
+            }
         }
     }
 }
@@ -222,26 +238,26 @@ class ContactManager {
 
     // Sets up event listeners for contact links
     setupContactActions() {
-        const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-        const emailAnimation = document.getElementById('email-animation'); // Get the animation element
+        // const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+        // const emailAnimation = document.getElementById('email-animation'); // Get the animation element
 
-        emailLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent the default mailto link behavior
+        // emailLinks.forEach(link => {
+        //     link.addEventListener('click', (e) => {
+        //         e.preventDefault(); // Prevent the default mailto link behavior
 
-                // Show the animation
-                emailAnimation.classList.add('active');
+        //         // Show the animation
+        //         emailAnimation.classList.add('active');
 
-                // Wait for the animation to play
-                setTimeout(() => {
-                    // Hide the animation
-                    emailAnimation.classList.remove('active');
+        //         // Wait for the animation to play
+        //         setTimeout(() => {
+        //             // Hide the animation
+        //             emailAnimation.classList.remove('active');
 
-                    // Trigger the mailto link programmatically
-                    window.location.href = e.target.closest('a').href;
-                }, 2000); // Wait for 2 seconds
-            });
-        });
+        //             // Trigger the mailto link programmatically
+        //             window.location.href = e.target.closest('a').href;
+        //         }, 2000); // Wait for 2 seconds
+        //     });
+        // });
 
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         phoneLinks.forEach(link => {

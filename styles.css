@@ -1480,3 +1480,62 @@ p {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px hsla(215, 84%, 50%, 0.2);
 }
+
+/* --- Tooltip Styles for Badges --- */
+
+/* Make the badge a positioning context */
+.badge-outline[data-tooltip] {
+    position: relative; /* Required for positioning the tooltip */
+    cursor: help;     /* Changes the cursor to a '?' to show it's interactive */
+}
+
+/* The tooltip bubble */
+.badge-outline[data-tooltip]::before {
+    content: attr(data-tooltip); /* Pulls text from the data-tooltip attribute */
+    position: absolute;
+    bottom: 125%; /* Position it 25% above the badge */
+    left: 50%;
+    transform: translateX(-50%); /* Horizontally center it */
+
+    /* Styling */
+    background-color: var(--color-primary); /* Uses your site's primary dark color */
+    color: var(--color-text-light);      /* Uses your site's light text color */
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 0.5rem;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    white-space: nowrap; /* Keeps the tooltip on one line */
+    box-shadow: var(--shadow-card);
+    
+    /* Hide by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 10; /* Ensures it appears on top of other elements */
+}
+
+/* The little triangle arrow */
+.badge-outline[data-tooltip]::after {
+    content: '';
+    position: absolute;
+    bottom: 125%; /* Position it */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Aligns it right below the bubble */
+    
+    /* The triangle trick */
+    border: 5px solid transparent;
+    border-top-color: var(--color-primary); /* Must match the bubble's background color */
+    
+    /* Hide by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 10;
+}
+
+/* Show the tooltip and arrow on hover */
+.badge-outline[data-tooltip]:hover::before,
+.badge-outline[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

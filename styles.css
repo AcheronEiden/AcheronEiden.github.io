@@ -2,9 +2,9 @@
 /* CSS Variables */
 :root {
     /* Charcoal Theme based on CV color */
-    --color-primary: #323B4C;
+    --color-primary: #2F3542;
     --color-primary-light: #4A5568;
-    --color-primary-dark: #2A3140;
+    --color-primary-dark: #242933;
     --color-secondary: #E2E8F0;
     /* Text Colors */
     --color-text-primary: hsl(215, 28%, 17%);
@@ -285,10 +285,16 @@ p {
 }
 
 .hero-side-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-professional);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 4;
+    width: 110%;
+    max-width: none;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.4);
     transition: var(--transition-smooth);
 }
 
@@ -1123,7 +1129,7 @@ p {
     /* Hide the content until it's typed */
     border-right: .15em transparent;
     /* The cursor is now invisible */
-    white-space: nowrap;
+    white-space: normal;
     animation: none;
 }
 
@@ -1353,6 +1359,8 @@ p {
 
     .hero-info-container,
     .hero-image-side {
+        flex: 1;
+        margin-top: 2rem;
         width: 100%;
         /* Makes each column full width */
     }
@@ -1538,4 +1546,34 @@ p {
 .badge-outline[data-tooltip]:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+/* Target mobile screens (768px and below) */
+@media (max-width: 768px) {
+    /* 1. Hide the side hardware/code image */
+    .hero-image-side {
+        display: none; /* Removes the image from the layout */
+    }
+
+    /* 2. Center the main content container */
+    .hero-content {
+        flex-direction: column; /* Stacks items vertically */
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Centers all text globally in this section */
+    }
+
+    /* 3. Ensure the info container takes full width and centers children */
+    .hero-info-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 4. Center the contact items (Location, Email, Phone) */
+    .hero-info {
+        justify-content: center;
+        width: 100%;
+    }
 }

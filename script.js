@@ -367,7 +367,12 @@ class CertificateManager {
     }
 
     handleVerification(button) {
-        alert('Certificate verification would open here. Please add your actual verification URLs.');
+        const url = button.dataset.url; // Grabs the URL from the data-url attribute
+        if (url) {
+            window.open(url, '_blank', 'noopener'); // Opens the verification link
+        } else {
+            alert('Verification link not found.');
+        }
     }
 }
 

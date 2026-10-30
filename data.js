@@ -138,7 +138,7 @@ export const experienceData = [
     {
         title: "IT Infrastructure Specialist",
         company: "Abbott Laboratories",
-        badge: "BTS Facility Infrastructure",
+        badge: "BTS Facility Infrastructure (Nordics: SE, DK, FI)",
         date: "Sep 2026 - Present",
         duties: [
             "Resolve complex hardware and facility network infrastructure faults across Nordic sites (Sweden, Denmark, Finland) as Tier 3 technical escalation.",
@@ -148,9 +148,9 @@ export const experienceData = [
         ]
     },
     {
-        title: "Software Engineer",
+        title: "Software Engineer (Internship)",
         company: "Portabel Health",
-        badge: "Internship",
+        info: "Healthcare Human Resource Management | Cross-functional engineering team of 20+",
         date: "Sep 2025 - Dec 2025",
         duties: [
             "Managed backend relational schemas and optimized SQL queries in PostgreSQL for time-series data storage.",
@@ -207,14 +207,14 @@ export const educationData = [
         degree: "Master of Science (M.Sc.) in Electrical Engineering",
         institution: "Department of Electrical Engineering | Uppsala University, Sweden",
         specialization: "Control of electrical systems",
-        date: "2025 - 2027",
+        date: "Aug 2025 - Jun 2027",
         badge: "In Progress"
     },
     {
         degree: "Bachelor of Science (B.Sc.) in Electrical Engineering",
         institution: "Department of Electrical Engineering | Uppsala University, Sweden",
         specialization: "Core Coursework: Linear dynamic systems, feedback control, and signal conditioning",
-        date: "2019 - 2022",
+        date: "Aug 2019 - Jun 2022",
         badge: "Graduated"
     }
 ];

@@ -85,8 +85,9 @@ function renderExperience() {
                 <div class="job-info">
                     <h3>${exp.title}</h3>
                     <p class="company">${exp.company}</p>
+                    ${exp.info ? `<p class="info">${exp.info}</p>` : ''}
                     ${exp.badge ? `<span class="badge badge-outline">${exp.badge}</span>` : ''}
-                </div>
+                    </div>
                 <span class="date">${exp.date}</span>
             </div>
             <div class="card-content">

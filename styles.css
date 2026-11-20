@@ -280,7 +280,9 @@ p {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    image-rendering: auto;
+    filter: contrast(0.96) brightness(0.98);
+    border: 2px solid rgba(255, 255, 255, 0.12);
     box-shadow: var(--shadow-professional);
 }
 

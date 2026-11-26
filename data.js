@@ -13,10 +13,9 @@ export const skillsData = {
         category: "OT/ICS & Infrastructure Security",
         items: [
             { name: "Industrial Cybersecurity", desc: "NIST SP 800-82, ISO/IEC 27001, SCADA/ICS segmentation, cell protection" },
-            { name: "Active Directory & Identity", desc: "Role-Based Access Control (RBAC), Least-Privilege enforcement, LDAP auditing" },
-            //{ name: "Industrial Networking", desc: "VLAN segmentation, subnets, TCP/IP, switch and router staging" },
-            { name: "Embedded Firmware & Low-Level", desc: "Bare-metal registers, timer interrupts (ISRs), C/C++ on ESP32 & ATmega328P" },
-            //{ name: "Hardware Interfacing Protocols", desc: "I2C non-blocking state machines, SPI, UART communication buses" }
+            { name: "Access Management & RBAC", desc: "Role-Based Access Control (RBAC), least-privilege provisioning, onboarding/offboarding governance" },
+            { name: "IT Operations & Incident Management", desc: "Tier 3 escalation, SLA compliance, root-cause hardware troubleshooting, asset lifecycle" },
+            { name: "Microcontroller Programming (Embedded C)", desc: "Bare-metal registers, timer interrupts (ISRs), C/C++ on ESP32 & ATmega328P" },
         ]
     },
 
@@ -91,8 +90,9 @@ export const skillsData = {
                 { name: "IntelliJ IDEA", tooltip: "Powerful IDE primarily for Java and backend development" },
                 { name: "Eclipse", tooltip: "A popular IDE for Java and other programming languages" },
                 { name: "Jupyter", tooltip: "Web-based notebook for data science and Python" },
-                { name: "MatLab", tooltip: "Platform for numerical computing and simulation" },
-                { name: "LabView", tooltip: "Graphical programming for measurement and automation" },
+                { name: "MATLAB", tooltip: "Platform for numerical computing and simulation" },
+                { name: "LabVIEW", tooltip: "Graphical programming for measurement and automation" },
+                { name: "Ngspice", tooltip: "Open-source mixed-level/mixed-signal circuit simulator (Electrical Eng.)" },
                 { name: "PSpice & LTspice", tooltip: "Simulation and circuit design (Electrical Eng.)" },
                 { name: "Altium", tooltip: "PCB and electronic design automation (Electrical Eng.)" },
                 { name: "Simulink", tooltip: "Block diagram environment for simulation (MATLAB)" },
@@ -117,6 +117,7 @@ export const skillsData = {
             title: "Databases & Cloud",
             badges: [
                 { name: "MySQL", tooltip: "Open-source relational database management system" },
+                { name: "PostgreSQL", tooltip: "Enterprise open-source relational database system" },
                 { name: "Firebase", tooltip: "Backend-as-a-Service (BaaS) platform by Google" },
                 { name: "Azure", tooltip: "Microsoft's cloud computing platform" },
                 { name: "Google Cloud", tooltip: "Google's cloud computing platform" },
@@ -141,10 +142,9 @@ export const experienceData = [
         badge: "BTS Facility Infrastructure (Nordics: SE, DK, FI)",
         date: "Sep 2026 - Present",
         duties: [
-            "Resolve complex hardware and facility network infrastructure faults across Nordic sites (Sweden, Denmark, Finland) as Tier 3 technical escalation.",
-            "Enforce Role-Based Access Control (RBAC) and least-privilege principles within Active Directory.",
-            "Configure network switches, routers, and secure subnets (VLANs) to maintain local network segmentation.",
-            "Execute PowerShell automation scripts to standardize OS configurations and endpoint compliance checks."
+            "Guide on-site incident management and root-cause troubleshooting across hardware, network ports, and facility systems in Sweden, Denmark, and Finland as Tier 3 escalation from Tier 1/2 global service desk teams in accordance with SLA targets.",
+            "Manage user access provisioning and Role-Based Access Control (RBAC) across onboarding, offboarding, and access-incident workflows to enforce least-privilege compliance for Abbott's Diagnostics (Core Lab & RDX) and Medical divisions.",
+            "Support regional IT Operations and end-to-end hardware lifecycle management, executing system deployments, fault-driven hardware replacements, secure stockroom inventory control, and cross-border equipment logistics."
         ]
     },
     {
@@ -164,8 +164,8 @@ export const experienceData = [
         badge: "Contract",
         date: "June 2025 - Sep 2025",
         duties: [
-            "Configured website infrastructure and integrated payment gateways.",
-            "Configured DNS routing and basic SEO indexing parameters."
+            "Configured website infrastructure, payment gateways, and social media platform integrations to streamline store operations.",
+            "Configured DNS routing and optimized SEO indexing parameters and product listings to improve search visibility."
         ]
     },
     {
@@ -174,9 +174,9 @@ export const experienceData = [
         badge: "Information Technology",
         date: "Aug 2023 - July 2025",
         duties: [
-            "Instructed laboratory sessions for 50+ engineering students across circuit analysis, embedded programming, and physical instrumentation.",
-            "Conducted debugging sessions utilizing mixed-signal oscilloscopes and multimeters while enforcing high-voltage safety protocols.",
-            "Calibrated and verified physical measurement test benches to ensure signal integrity."
+            "Instructed laboratory sessions and evaluated technical coursework for 50+ engineering students per semester across circuit analysis, embedded C/Python programming, and physical instrumentation.",
+            "Conducted hands-on debugging sessions utilizing mixed-signal oscilloscopes, multimeters, and arbitrary waveform generators while strictly enforcing high-voltage laboratory safety protocols.",
+            "Calibrated and verified physical measurement test benches in collaboration with faculty to ensure signal integrity and accurate baseline telemetry across experimental hardware."
         ]
     },
     {
@@ -188,16 +188,6 @@ export const experienceData = [
             "Oversaw development and maintenance of company digital platforms as lead programmer.",
             "Defined the technical roadmap and implemented new web functionality.",
             "Maintained deployment stability and digital asset security."
-        ]
-    },
-    {
-        title: "Co-founder (CMO & CFO)",
-        company: "RARE",
-        badge: "Entrepreneurship Program",
-        date: "June 2018 - Sep 2018",
-        duties: [
-            "Co-founded a recycling venture as part of a government entrepreneurship summer program.",
-            "Managed early-stage business execution, financial tracking, and marketing outreach."
         ]
     }
 ];
